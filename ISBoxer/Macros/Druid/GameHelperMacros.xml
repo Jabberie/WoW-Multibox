@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Box xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ObjectType>ISBoxer_Toolkit.Configs.WoWMacroSet</ObjectType>
+  <SerializedObject>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;WoWMacroSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Name&gt;GSE&lt;/Name&gt;
+  &lt;WoWMacros&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/stopmacro [channeling]
+!if (character is in "Druid" and character is in "Tank")/cast [noform:1] !Bear Form
+!if (character is in "Druid" and character is in "Tank")/castsequence  reset=target  Moonfire, null
+!if (character is in "Druid" and character is in "Healer")/cast [talent:3/1, noform:5] !Treant Form; [talent:3/2, noform:4][talent:3/3, noform:4] !Treant Form
+!if (character is in "Druid" and character is in "Healer")/castsequence [@player] reset=combat  Efflorescence, null
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/cast [noform:2] !Cat Form
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/cast [nostealth, nocombat] Prowl
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/castsequence [combat] reset=combat  Rake, Shred, Shred, Rip, nulll
+!if (character is in "Druid" and character is in "DPS" and character is in "Ranged")/cast [noform:4] Moonkin Form
+!if (character is in "Druid")/cast [@focus,dead,combat,noraid][@party1,dead,combat,noraid][@party2,dead,combat,noraid][@party3,dead,combat,noraid][@party4,dead,combat,noraid][@party5,dead,combat,noraid] Rebirth&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;KeyPress&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;CTRL+ALT+F12&lt;/Combo&gt;
+        &lt;Modifiers&gt;Ctrl Alt&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;F12&lt;/Key&gt;
+          &lt;Code&gt;88&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Druid" and character is in "Tank")/cast [combat] Thrash
+!if (character is in "Druid" and character is in "Healer")/cast [@focus,exists][@Party1,exists] Cenarion Ward
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/castsequence  reset=combat  Shred, Rake, Shred, Shred, Ferocious Bite
+!if (character is in "Druid" and character is in "DPS" and character is in "Ranged")/castsequence  reset=target  Sunfire, null&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Sequence1&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;CTRL+SHIFT+F12&lt;/Combo&gt;
+        &lt;Modifiers&gt;Ctrl Shift&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;F12&lt;/Key&gt;
+          &lt;Code&gt;88&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Druid" and character is in "Tank")/castsequence Swipe, Swipe, Moonfire
+!if (character is in "Druid" and character is in "Healer")/castsequence [@focus,exists][@Party1,exists] reset=15/combat  Lifebloom, Regrowth, Rejuvenation, Wild Growth, Healing Touch
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/castsequence [combat] reset=combat  Shred, Rake, Tiger's Fury
+!if (character is in "Druid" and character is in "DPS" and character is in "Ranged")/castsequence  reset=target  Moonfire, null&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Sequence2&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;SHIFT+ALT+F12&lt;/Combo&gt;
+        &lt;Modifiers&gt;Shift Alt&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;F12&lt;/Key&gt;
+          &lt;Code&gt;88&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Druid" and character is in "Tank")/castsequence [combat] Ironfur, Mark of Ursol
+!if (character is in "Druid" and character is in "Healer")/castsequence [@focus,exists][@Party1,exists] reset=15/combat  Healing Touch, Healing Touch, Swiftmend
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/cast [combat] Ashamane's Frenzy
+!if (character is in "Druid" and character is in "DPS" and character is in "Ranged")/cast New Moon&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Sequence3&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;CTRL+F12&lt;/Combo&gt;
+        &lt;Modifiers&gt;Ctrl&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;F12&lt;/Key&gt;
+          &lt;Code&gt;88&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Druid" and character is in "Tank")/cast [combat] Thrash
+!if (character is in "Druid" and character is in "Healer")/castsequence [@focus, exists, combat][@Party1,exists,combat] reset=15/combat  Healing Touch, Regrowth, Rejuvenation, Ironbark
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/castsequence  reset=combat  Shred, Rake, Shred, Shred, Ferocious Bite
+!if (character is in "Druid" and character is in "DPS" and character is in "Ranged")/castsequence [combat] Starsurge, Solar Wrath, Lunar Strike, Solar Wrath&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Sequence4&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;CTRL+SHIFT+ALT+F12&lt;/Combo&gt;
+        &lt;Modifiers&gt;Ctrl Shift Alt&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;F12&lt;/Key&gt;
+          &lt;Code&gt;88&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Druid" and character is in "Tank")/castsequence [combat] Mangle, Rage of the Sleeper
+!if (character is in "Druid" and character is in "Healer")/cast [@focus,exists][@Party1,exists] Cenarion Ward
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/castsequence [combat] reset=combat  Shred, Rake, Tiger's Fury
+!if (character is in "Druid" and character is in "DPS" and character is in "Ranged")/castsequence Lunar Strike, Solar Wrath, Starsurge, Solar Wrath, Lunar Strike, Starsurge&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Sequence5&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;SHIFT+F12&lt;/Combo&gt;
+        &lt;Modifiers&gt;Shift&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;F12&lt;/Key&gt;
+          &lt;Code&gt;88&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Druid" and character is in "Tank")/castsequence [combat] Mangle, Mangle, Mangle, Frenzied Regeneration
+!if (character is in "Druid" and character is in "Healer")/castsequence [@focus,exists][@Party1,exists] reset=15/combat  Lifebloom, Regrowth, Rejuvenation, Wild Growth, Healing Touch
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/cast [combat] Ashamane's Frenzy
+!if (character is in "Druid" and character is in "DPS" and character is in "Ranged")/castsequence [combat] Solar Wrath, Lunar Strike, Solar Wrath, Moonfire&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Sequence6&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;ALT+F12&lt;/Combo&gt;
+        &lt;Modifiers&gt;Alt&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;F12&lt;/Key&gt;
+          &lt;Code&gt;88&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Druid" and character is in "Tank")/cast [combat] Thrash
+!if (character is in "Druid" and character is in "Healer")/castsequence [@focus,exists][@Party1,exists] reset=15/combat  Healing Touch, Healing Touch, Swiftmend
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/castsequence  reset=combat  Shred, Rake, Shred, Shred, Ferocious Bite
+!if (character is in "Druid" and character is in "DPS" and character is in "Ranged")/castsequence [combat] Solar Wrath, Starsurge, Lunar Strike, Solar Wrath&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Sequence7&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;SHIFT+F11&lt;/Combo&gt;
+        &lt;Modifiers&gt;Shift&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;F11&lt;/Key&gt;
+          &lt;Code&gt;87&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Druid" and character is in "Tank")/castsequence Swipe, Swipe, Moonfire
+!if (character is in "Druid" and character is in "Healer")/castsequence [@focus, exists, combat][@Party1,exists,combat] reset=15/combat  Healing Touch, Regrowth, Rejuvenation, Ironbark
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/castsequence [combat] reset=combat  Shred, Rake, Tiger's Fury
+!if (character is in "Druid" and character is in "DPS" and character is in "Ranged")/castsequence [combat] Starsurge, Solar Wrath, Solar Wrath, Sunfire&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Sequence8&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;CTRL+F11&lt;/Combo&gt;
+        &lt;Modifiers&gt;Ctrl&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;F11&lt;/Key&gt;
+          &lt;Code&gt;87&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Druid" and character is in "Tank")/castsequence [combat] Ironfur, Mark of Ursol
+!if (character is in "Druid" and character is in "Healer")/cast [@focus,exists][@Party1,exists] Cenarion Ward
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/cast [combat] Ashamane's Frenzy
+!if (character is in "Druid" and character is in "DPS" and character is in "Ranged")/castsequence [combat] Solar Wrath, Lunar Strike, Starsurge, Moonfire&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Sequence9&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;ALT+F11&lt;/Combo&gt;
+        &lt;Modifiers&gt;Alt&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;F11&lt;/Key&gt;
+          &lt;Code&gt;87&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Druid" and character is in "Tank")/cast [combat] Thrash
+!if (character is in "Druid" and character is in "Healer")/castsequence [@focus,exists][@Party1,exists] reset=15/combat  Lifebloom, Regrowth, Rejuvenation, Wild Growth, Healing Touch
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/castsequence  reset=combat  Shred, Rake, Shred, Shred, Ferocious Bite
+!if (character is in "Druid" and character is in "DPS" and character is in "Ranged")/castsequence [combat] Lunar Strike, Solar Wrath, Lunar Strike&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Sequence10&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;CTRL+ALT+F11&lt;/Combo&gt;
+        &lt;Modifiers&gt;Ctrl Alt&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;F11&lt;/Key&gt;
+          &lt;Code&gt;87&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Druid" and character is in "Tank")/castsequence [combat] Mangle, Mangle, Mangle, Frenzied Regeneration
+!if (character is in "Druid" and character is in "Healer")/castsequence [@focus,exists][@Party1,exists] reset=15/combat  Healing Touch, Healing Touch, Swiftmend
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/castsequence [combat] reset=combat  Shred, Rake, Tiger's Fury
+!if (character is in "Druid" and character is in "DPS" and character is in "Ranged")/cast New Moon&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Sequence11&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;SHIFT+ALT+F11&lt;/Combo&gt;
+        &lt;Modifiers&gt;Shift Alt&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;F11&lt;/Key&gt;
+          &lt;Code&gt;87&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Druid" and character is in "Tank")/castsequence [combat] Mangle, Rage of the Sleeper
+!if (character is in "Druid" and character is in "Healer")/castsequence [@focus, exists, combat][@Party1,exists,combat] reset=15/combat  Healing Touch, Regrowth, Rejuvenation, Ironbark
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/cast [combat] Ashamane's Frenzy
+!if (character is in "Druid" and character is in "DPS" and character is in "Ranged")/cast [combat] Starsurge&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Sequence12&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;CTRL+SHIFT+F11&lt;/Combo&gt;
+        &lt;Modifiers&gt;Ctrl Shift&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;F11&lt;/Key&gt;
+          &lt;Code&gt;87&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Druid" and character is in "Tank")/cast Mangle
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/cast [combat] Berserk
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/console autounshift 0
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/cast [@player] Regrowth
+!if (character is in "Druid" and character is in "DPS" and character is in "Melee")/console autounshift 1
+!if (character is in "Druid" and character is in "DPS" and character is in "Ranged")/cast [combat] Celestial Alignment
+!if (character is in "Druid" and character is in "DPS" and character is in "Ranged")/cast [combat] Berserking&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;KeyRelease&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;CTRL+SHIFT+ALT+F11&lt;/Combo&gt;
+        &lt;Modifiers&gt;Ctrl Shift Alt&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;F11&lt;/Key&gt;
+          &lt;Code&gt;87&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+  &lt;/WoWMacros&gt;
+&lt;/WoWMacroSet&gt;</SerializedObject>
+</Box>

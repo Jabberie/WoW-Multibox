@@ -1,0 +1,33 @@
+Sequences['BM_AoE_Farm'] = {
+-- This Sequence was exported from GSE 2.1.00.
+  Author="Jabberie@draka",
+  SpecID=253,
+  Talents = "31133?3",
+  Default=1,
+  Icon='ability_hunter_bestialdiscipline',
+  MacroVersions = {
+    [1] = {
+      StepFunction = "Sequential",
+      KeyPress={
+        "/cast [@focus, exists, nodead][@pet, exists, nodead] Misdirection",
+      },
+      PreMacro={
+      },
+        "/cast [nopet] Call Pet 1",
+        "/cast Dire Beast",
+        "/castsequence Kill Command, Multi-Shot, Multi-Shot, Multi-Shot, Multi-Shot",
+        "/cast [nopet][@pet,dead] Revive Pet",        
+        "/castsequence [combat] reset=combat  Dire Beast, Titan's Thunder, Fetch",
+        "/cast [combat] Mend Pet",
+        "/cast Kill Command",
+        "/castsequence Kill Command, Multi-Shot, Multi-Shot, Fetch",
+      PostMacro={
+      },
+      KeyRelease={
+        "/cast [combat] Bestial Wrath",
+        "/cast [combat] Blood Fury",
+        "/cast [combat] Aspect of the Wild",
+      },
+    },
+  },
+}

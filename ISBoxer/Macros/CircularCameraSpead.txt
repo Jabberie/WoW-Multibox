@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Box xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ObjectType>ISBoxer_Toolkit.Configs.WoWMacro</ObjectType>
+  <SerializedObject>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;WoWMacro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;MacroCommands&gt;/console cameraYawMoveSpeed 90;
+!if (character is "slot 1") /script SetView(4);SetView(4);SaveView(3);
+!if (character is "slot 2") /script SetView(4);SetView(4);SaveView(3);
+!if (character is not "slot 1" and character is not "slot 2")/script SetView(4);SetView(4);MoveViewRightStart(0.4);C_Timer.After((360/({SLOTS}-1)*({SLOT}-2)/36), function() MoveViewRightStop();SaveView(3);end);&lt;/MacroCommands&gt;
+  &lt;Name&gt;ISBSetCameras&lt;/Name&gt;
+  &lt;ColloquialName&gt;CameraSpread&lt;/ColloquialName&gt;
+  &lt;Combo&gt;
+    &lt;Combo&gt;SHIFT+HOME&lt;/Combo&gt;
+    &lt;Modifiers&gt;Shift&lt;/Modifiers&gt;
+    &lt;Key&gt;
+      &lt;Key&gt;HOME&lt;/Key&gt;
+      &lt;Code&gt;327&lt;/Code&gt;
+    &lt;/Key&gt;
+  &lt;/Combo&gt;
+  &lt;AllowCustomModifiers /&gt;
+&lt;/WoWMacro&gt;</SerializedObject>
+</Box>
