@@ -8,7 +8,7 @@ WinGet, wowid, list, World of Warcraft
 {  
 	;; Ctrl+Space makes everyone jump
 	^Space::
-	KeyWait, Space, D
+	KeyWait, Space
 	ControlSend,, {Space}, ahk_id %wowid1%
 	ControlSend,, {Space}, ahk_id %wowid2%
 	ControlSend,, {Space}, ahk_id %wowid3%
@@ -18,7 +18,7 @@ WinGet, wowid, list, World of Warcraft
 
 	;; Shift+V is on my action bars. It has a mount
 	+v::
-	KeyWait, v, D
+	KeyWait, v
 	ControlSend,, {shift down}v{shift up}, ahk_id %wowid1%
 	ControlSend,, {shift down}v{shift up}, ahk_id %wowid2%
 	ControlSend,, {shift down}v{shift up}, ahk_id %wowid3%
@@ -29,7 +29,7 @@ WinGet, wowid, list, World of Warcraft
 	;; E is my main GSE macro keybind
 	;; I have added a macro to my numpad 2 for my slaves with /assist LEADCHARNAME
 	e::
-	KeyWait, e, D
+	KeyWait, e
 	ControlSend,, {Numpad2}, ahk_id %wowid1%
 	Sleep 150
 	ControlSend,, {e}, ahk_id %wowid1% 
@@ -75,6 +75,52 @@ WinGet, wowid, list, World of Warcraft
 	Sleep 150
 	ControlSend,, {F2}, ahk_id %wowid5% 	
 	Return
+
+
+ 	Home::
+ 	KeyWait, Home
+ 	ControlSend,, {Alt down}{Home}{Alt up}, ahk_id %wowid1%
+ 	ControlSend,, {Ctrl down}{Home}{Ctrl up}, ahk_id %wowid2%
+ 	ControlSend,, {Ctrl down}{Home}{Ctrl up}, ahk_id %wowid3%
+ 	ControlSend,, {Ctrl down}{Home}{Ctrl up}, ahk_id %wowid4%
+ 	ControlSend,, {Ctrl down}{Home}{Ctrl up}, ahk_id %wowid5%
+ 	Return		
+
+	Numpad6::
+	KeyWait, Numpad6
+	ControlSend,, {Numpad6}, ahk_id %wowid1%
+	ControlSend,, {Numpad6}, ahk_id %wowid2%
+	ControlSend,, {Numpad6}, ahk_id %wowid3%
+	ControlSend,, {Numpad6}, ahk_id %wowid4%
+	ControlSend,, {Numpad6}, ahk_id %wowid5%
+	Return	
+
+	Numpad7::
+	KeyWait, Numpad7
+	ControlSend,, {Numpad7}, ahk_id %wowid1%
+	ControlSend,, {Numpad7}, ahk_id %wowid2%
+	ControlSend,, {Numpad7}, ahk_id %wowid3%
+	ControlSend,, {Numpad7}, ahk_id %wowid4%
+	ControlSend,, {Numpad7}, ahk_id %wowid5%
+	Return	
+
+	Numpad8::
+	KeyWait, Numpad8
+	ControlSend,, {Numpad8}, ahk_id %wowid1%
+	ControlSend,, {Numpad8}, ahk_id %wowid2%
+	ControlSend,, {Numpad8}, ahk_id %wowid3%
+	ControlSend,, {Numpad8}, ahk_id %wowid4%
+	ControlSend,, {Numpad8}, ahk_id %wowid5%
+	Return	
+
+	Numpad9::
+	KeyWait, Numpad9
+	ControlSend,, {Numpad9}, ahk_id %wowid1%
+	ControlSend,, {Numpad9}, ahk_id %wowid2%
+	ControlSend,, {Numpad9}, ahk_id %wowid3%
+	ControlSend,, {Numpad9}, ahk_id %wowid4%
+	ControlSend,, {Numpad9}, ahk_id %wowid5%
+	Return	
 
 	;; Break Follow
 	Down::
