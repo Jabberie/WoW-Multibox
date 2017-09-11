@@ -10,14 +10,14 @@ Sequences['Demo_AoE'] = {
       StepFunction = [[Sequential]],
       KeyPress={
         "/stopmacro [channeling]",
-        "/cast [mod:alt] Drain Life",
+        "/cast [mod:shift] Drain Life",
         "/castsequence reset=target Doom, null",
       },
       PreMacro={
       },
-        "/castsequence [combat] Demonwrath, Hand of Gul'dan, Demonic Empowerment, Demonwrath, Demonwrath, Life Tap",
-        "/cast [combat] Grimoire: Felguard",
-        "/cast [combat] Command Demon",
+        "/castsequence [combat] reset=combat/15 Demonwrath, Hand of Gul'dan, Demonic Empowerment, Demonwrath, Demonwrath, Life Tap",
+        "/cast [combat] reset=combat/15 Grimoire: Felguard",
+        "/cast [combat] reset=combat/15 Command Demon",
       PostMacro={
       },
       KeyRelease={
