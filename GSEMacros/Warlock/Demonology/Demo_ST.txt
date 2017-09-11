@@ -10,7 +10,7 @@ Sequences['Demo_ST'] = {
       KeyPress={
         "/stopmacro [channeling]",
         "/cast [mod:alt] Drain Life",
-        "/castsequence  reset=target  Doom, null",
+        "/castsequence reset=target Doom, null",
       },
       PreMacro={
       },
@@ -24,6 +24,8 @@ Sequences['Demo_ST'] = {
       PostMacro={
       },
       KeyRelease={
+        "/cast [combat] Blood Fury",
+        "/cast [combat] Berserking",        
         "/petautocastoff [group] Threatening Presence",
         "/petautocaston [nogroup] Threatening Presence",
       },
