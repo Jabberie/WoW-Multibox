@@ -1,0 +1,28 @@
+Sequences['Demo_AoE'] = {
+  Author="Jabberie@draka",
+  SpecID=266,
+  Talents = "3,1,2,1,1,2,2",
+  Help = "",
+  Default=1,
+  Icon='INV_MISC_QUESTIONMARK',
+  MacroVersions = {
+    [1] = {
+      StepFunction = [[Sequential]],
+      KeyPress={
+        "/use [mod:alt] Drain Life",
+        "/castsequence  reset=target  Doom, null",
+      },
+      PreMacro={
+      },
+        "/castsequence [nochanneling] Demonwrath, Hand of Gul'dan, Demonic Empowerment, Demonwrath, Demonwrath, Life Tap",
+        "/cast [nochanneling] Grimoire: Felguard",
+        "/cast [nochanneling] Command Demon",
+      PostMacro={
+      },
+      KeyRelease={
+        "/petautocastoff [group] Threatening Presence",
+        "/petautocaston [nogroup] Threatening Presence",
+      },
+    },
+  },
+}
