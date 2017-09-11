@@ -8,18 +8,19 @@ Sequences['Demo_ST'] = {
     [1] = {
       StepFunction = [[Sequential]],
       KeyPress={
-        "/use [mod:alt] Drain Life",
+        "/stopmacro [channeling]",
+        "/cast [mod:alt] Drain Life",
         "/castsequence  reset=target  Doom, null",
       },
       PreMacro={
       },
-        "/castsequence [nochanneling] Demonbolt, Call Dreadstalkers, Demonic Empowerment, Life Tap",
-        "/castsequence [nochanneling] Demonbolt, Hand of Gul'dan, Demonic Empowerment",
-        "/castsequence [nochanneling] Summon Doomguard, Demonic Empowerment",
-        "/castsequence [nochanneling] Demonbolt, Hand of Gul'dan, Call Dreadstalkers, Thal'kiel's Consumption",
-        "/castsequence [nochanneling] Demonbolt, Demonbolt, Grimoire: Felguard, Demonic Empowerment",
-        "/cast [nochanneling] Command Demon",
-        "/cast [nochanneling] Demonbolt",
+        "/castsequence Shadow Bolt, Call Dreadstalkers, Demonic Empowerment, Life Tap",
+        "/castsequence Shadow Bolt, Hand of Gul'dan, Demonic Empowerment",
+        "/castsequence [combat] Summon Doomguard, Demonic Empowerment",
+        "/castsequence Shadow Bolt, Hand of Gul'dan, Call Dreadstalkers, Thal'kiel's Consumption",
+        "/castsequence Shadow Bolt, Shadow Bolt, Grimoire: Felguard, Demonic Empowerment",
+        "/cast [combat] Command Demon",
+        "/cast Shadow Bolt",
       PostMacro={
       },
       KeyRelease={

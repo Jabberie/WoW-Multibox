@@ -9,7 +9,7 @@ Sequences['Demo_AoE'] = {
     [1] = {
       StepFunction = [[Sequential]],
       KeyPress={
-        "/use [mod:alt] Drain Life",
+        "/cast [mod:alt] Drain Life",
         "/castsequence  reset=target  Doom, null",
       },
       PreMacro={
