@@ -25,6 +25,13 @@
 /use Found Sack of Gems
 /use Scavenged Cloth
 /use Pile of Pet Goodies
+/use Wyrmtongue Cache of Magic
+/use Wyrmtongue Cache of Skins
+/use Wyrmtongue Cache of Minerals
+/use Wyrmtongue Cache of Finery
+/use Wyrmtongue Cache of Supplies
+/use Wyrmtongue Cache of Herbs
+/use Wyrmtongue Cache of Shiny Things
 /use Sprocket Container&lt;/MacroCommands&gt;
   &lt;Name&gt;UseCaches&lt;/Name&gt;
   &lt;ColloquialName&gt;UseCaches&lt;/ColloquialName&gt;
