@@ -15,11 +15,13 @@ Sequences['BM_AoE_Farm'] = {
       },
         "/cast [nopet] Call Pet 2", -- Pet 2 is a tenacity pet
         "/cast Dire Beast",
+        "/cast [talent:6/1] A Murder of Crows; [talent:6/2] Barrage",
         "/castsequence Kill Command, Multi-Shot, Multi-Shot, Multi-Shot, Multi-Shot",
         "/cast [nopet][@pet,dead] Revive Pet",        
         "/castsequence [combat] reset=combat  Dire Beast, Titan's Thunder, Fetch",
         "/cast [combat] Mend Pet",
         "/cast Kill Command",
+        "/cast [talent:6/1] A Murder of Crows; [talent:6/2] Barrage",
         "/castsequence Kill Command, Multi-Shot, Multi-Shot, Fetch",
       PostMacro={
       },
