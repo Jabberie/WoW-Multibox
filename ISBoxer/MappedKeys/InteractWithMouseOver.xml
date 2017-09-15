@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Box xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ObjectType>ISBoxer_Toolkit.Configs.KeyMaps.MappedKey</ObjectType>
+  <SerializedObject>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;MappedKey xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Name&gt;Interact With Mouseover&lt;/Name&gt;
+  &lt;Combo&gt;
+    &lt;Combo&gt;F5&lt;/Combo&gt;
+    &lt;Key&gt;
+      &lt;Key&gt;F5&lt;/Key&gt;
+      &lt;Code&gt;63&lt;/Code&gt;
+    &lt;/Key&gt;
+  &lt;/Combo&gt;
+  &lt;Mode&gt;OnPressAndRelease&lt;/Mode&gt;
+  &lt;Steps&gt;
+    &lt;Step&gt;
+      &lt;Actions&gt;
+        &lt;MappedKeyAction xsi:type="MappedKeyExecuteAction"&gt;
+          &lt;Target&gt;all other&lt;/Target&gt;
+          &lt;KeyMapString&gt;ISB42 - WoW&lt;/KeyMapString&gt;
+          &lt;MappedKeyString&gt;Click to Move Off&lt;/MappedKeyString&gt;
+        &lt;/MappedKeyAction&gt;
+        &lt;MappedKeyAction xsi:type="VariableKeystrokeAction"&gt;
+          &lt;Target&gt;all&lt;/Target&gt;
+          &lt;Name&gt;SetView(4)&lt;/Name&gt;
+        &lt;/MappedKeyAction&gt;
+        &lt;MappedKeyAction xsi:type="VariableKeystrokeAction"&gt;
+          &lt;Target&gt;all&lt;/Target&gt;
+          &lt;Name&gt;SetView(4)&lt;/Name&gt;
+        &lt;/MappedKeyAction&gt;
+        &lt;MappedKeyAction xsi:type="SyncCursorAction"&gt;
+          &lt;Target&gt;all&lt;/Target&gt;
+        &lt;/MappedKeyAction&gt;
+        &lt;MappedKeyAction xsi:type="WoWMacroRefAction"&gt;
+          &lt;Target&gt;all&lt;/Target&gt;
+          &lt;UseCustomModifiers /&gt;
+          &lt;WoWMacro&gt;
+            &lt;WoWMacroSetString&gt;UIControl 2&lt;/WoWMacroSetString&gt;
+            &lt;WoWMacroString&gt;ClearTarget&lt;/WoWMacroString&gt;
+          &lt;/WoWMacro&gt;
+        &lt;/MappedKeyAction&gt;
+        &lt;MappedKeyAction xsi:type="VariableKeystrokeAction"&gt;
+          &lt;Target&gt;all&lt;/Target&gt;
+          &lt;Name&gt;Interact With Mouseover&lt;/Name&gt;
+        &lt;/MappedKeyAction&gt;
+      &lt;/Actions&gt;
+    &lt;/Step&gt;
+    &lt;Step&gt;
+      &lt;Actions&gt;
+        &lt;MappedKeyAction xsi:type="MappedKeyExecuteAction"&gt;
+          &lt;Target&gt;all other&lt;/Target&gt;
+          &lt;KeyMapString&gt;ISB42 - WoW&lt;/KeyMapString&gt;
+          &lt;MappedKeyString&gt;Click to Move On&lt;/MappedKeyString&gt;
+        &lt;/MappedKeyAction&gt;
+      &lt;/Actions&gt;
+    &lt;/Step&gt;
+  &lt;/Steps&gt;
+&lt;/MappedKey&gt;</SerializedObject>
+</Box>
