@@ -1,11 +1,7 @@
-local _, Sequences = ...
----------------------------
----------------------------
----------------------------
 Sequences['Destro_AOE'] = {
-  Author="Jabberie@Draka",
+  Author = "Jabberie@Draka",
   SpecID=267,
-  Talents = "1331222",
+  Talents = "1,1,?,2,1,1,2",
   Default=1,
   MacroVersions = {
     [1] = {
