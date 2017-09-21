@@ -1,7 +1,7 @@
 Sequences['Prot_ST'] = {
   Author="Jabberie@Draka",
   SpecID=73,
-  Talents = "1223312",
+  Talents = "1,2,2,3,3,1,2",
   Default=1,
   MacroVersions = {
     [1] = {
