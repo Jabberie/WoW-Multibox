@@ -1,4 +1,3 @@
-
 Sequences['Arcane_ST_Burn'] = {
   Author="Jabberie@Draka",
   SpecID=62,

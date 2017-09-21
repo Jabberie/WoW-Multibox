@@ -1,7 +1,3 @@
-local _, Sequences = ...
----------------------------
----------------------------
----------------------------
 Sequences['Outlaw_AoE'] = {
   Author="Jabberie@Draka",
   SpecID=260,

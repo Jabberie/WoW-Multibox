@@ -1,7 +1,3 @@
-local _, Sequences = ...
----------------------------
----------------------------
----------------------------
 Sequences['Enhancement_ST'] = {
   Author="Jabberie@Draka",
   SpecID=263,

@@ -1,5 +1,4 @@
 Sequences['BM_Ridosaw'] = {
--- This Sequence was exported from GSE 2.1.00.
   Author="Jabberie@draka",
   SpecID=253,
   Talents = "31133?3",
