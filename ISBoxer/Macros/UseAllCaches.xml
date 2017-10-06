@@ -3,36 +3,43 @@
   <ObjectType>ISBoxer_Toolkit.Configs.WoWMacro</ObjectType>
   <SerializedObject>&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;WoWMacro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;MacroCommands&gt;/use Kirin Tor Chest
-/use Highmountain Tribute
-/use Valarjar Cache
-/use Nightfallen Hoard
-/use Farondis Lockbox
-/use Warden's Field Kit
-/use Dreamweaver Provisions
-/use Legionfall Recompense
-/use Valarjar Strongbox
-/use Warden's Supply Kit
-/use Nightfallen Cache
-/use Highmountain Supplies
-/use Dreamweaver Cache
-/use Farondis Chest
-/use Mana-Tinged Pack
-/use Salvaged Armor
-/use Bloodhunter's Quarry
-/use Harvested Goods
+  &lt;MacroCommands&gt;/use Bloodhunter's Quarry
+/use Brittle Krokul Chest
 /use Butchered Meat
+/use Dreamweaver Cache
+/use Dreamweaver Provisions
+/use Farondis Chest
+/use Farondis Lockbox
 /use Found Sack of Gems
-/use Scavenged Cloth
+/use Gilded Trunk
+/use Gleaming Footlocker
+/use Harvested Goods
+/use Highmountain Supplies
+/use Highmountain Tribute
+/use Kirin Tor Chest
+/use Legionfall Recompense
+/use Legionfall Spoils
+/use Light's Fortune
+/use Mana-Tinged Pack
+/use Nightfallen Cache
+/use Nightfallen Hoard
 /use Pile of Pet Goodies
-/use Wyrmtongue Cache of Magic
-/use Wyrmtongue Cache of Skins
-/use Wyrmtongue Cache of Minerals
+/use Salvaged Armor
+/use Scavenged Cloth
+/use Scuffed Krokul Cache
+/use Scuffed Krokul Cache
+/use Sprocket Container
+/use Valarjar Cache
+/use Valarjar Strongbox
+/use Warden's Field Kit
+/use Warden's Supply Kit
 /use Wyrmtongue Cache of Finery
-/use Wyrmtongue Cache of Supplies
 /use Wyrmtongue Cache of Herbs
+/use Wyrmtongue Cache of Magic
+/use Wyrmtongue Cache of Minerals
 /use Wyrmtongue Cache of Shiny Things
-/use Sprocket Container&lt;/MacroCommands&gt;
+/use Wyrmtongue Cache of Skins
+/use Wyrmtongue Cache of Supplies&lt;/MacroCommands&gt;
   &lt;Name&gt;UseCaches&lt;/Name&gt;
   &lt;ColloquialName&gt;UseCaches&lt;/ColloquialName&gt;
   &lt;Combo&gt;
