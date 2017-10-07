@@ -3,7 +3,7 @@
   <ObjectType>ISBoxer_Toolkit.Configs.KeyMaps.MappedKey</ObjectType>
   <SerializedObject>&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;MappedKey xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;Name&gt;Flying V Formation - Jabberie&lt;/Name&gt;
+  &lt;Name&gt;Flying Diamond Formation - Jabberie&lt;/Name&gt;
   &lt;Description&gt;Make sure your movement keys are configured under Variable Keystrokes in order to use this Formation!
 
 The Flying V aligns your characters in a V behind the active character&lt;/Description&gt;
