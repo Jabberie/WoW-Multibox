@@ -6,50 +6,51 @@ Sequences['Restoration_Test'] = {
   Icon='Spell_Nature_MagicImmunity',
   MacroVersions = {
     [1] = {
-      StepFunction = [[Sequential]],
+      StepFunction = "Sequential",
       KeyPress={
-      	"/stopmacro [channeling]", 
+        "/stopmacro [channeling]",
       },
       PreMacro={
       },
-        "/castsequence [@focus, exists, nodead] Healing Wave, Healing Wave;  reset=combat/target  Flame Shock, Lightning Bolt, Lightning Bolt, Lightning Bolt, Lightning Bol",
+        "/castsequence [@focus, exists, nodead] Healing Wave, Healing Wave;  reset=combat/target  Flame Shock, Lightning Bolt, Lightning Bolt, Lightning Bolt, Lightning Bolt",
         "/cast [@focus, exists, nodead] Riptide; Lava Burst",
       PostMacro={
       },
       KeyRelease={
         "/cast [@focus, exists, nodead, combat] Healing Stream Totem",
         "/cast [combat] Blood Fury",
+        "/cast [combat] Berserking",
       },
     },
     [2] = {
-      StepFunction = [[Sequential]],
+      StepFunction = "Sequential",
       KeyPress={
-        "/stopmacro [channeling]", 
+        "/stopmacro [channeling]",
       },
       PreMacro={
       },
         "/cast [@focus, exists, nodead, nomod][@Party1, exists, nodead, nomod] Riptide",
-        "/castsequence [combat, mod:ctrl] reset=combat Flame Shock, Lava Burst, Lightning Bolt, Lightning Bolt, Lightning Bolt, Lightning Bolt",
-        "/castsequence [@focus, exists, nodead, nomod][@Party1, exists, nodead, nomod][] Healing Wave, Healing Wave",
-        "/cast [@player, combat, nomod] Healing Rain",
-        "/cast [@player, combat, nomod] Gift of the Queen",
+        "/castsequence [mod:ctrl] reset=combat/target  Flame Shock, Lightning Bolt, Lightning Bolt, Lightning Bolt, Lightning Bolt, Lightning Bolt; [@focus, exists, nodead, nomod][@Party1, exists, nodead, nomod] Healing Wave, Healing Wave",
+        "/castsequence [mod:ctrl] reset=combat  Lava Burst, Lava Burst, Lava Burst; [@player, combat, nomod] Healing Rain",
+        "/castsequence [mod:ctrl] reset=combat  Lava Burst, Lava Burst, Lava Burst; [@player, combat, nomod] Gift of the Queen",
       PostMacro={
       },
       KeyRelease={
         "/cast [combat] Healing Stream Totem",
         "/cast [combat] Blood Fury",
+        "/cast [combat] Berserking",
       },
     },
     [3] = {
-      StepFunction = [[Sequential]],
+      StepFunction = "Sequential",
       KeyPress={
-        "/stopmacro [channeling]", 
+        "/stopmacro [channeling]",
       },
       PreMacro={
       },
         "/cast [@focus, exists, nodead][@Party1, exists, nodead] Riptide",
-        "/castsequence [@focus, exists, nodead, nomod][@Party1, exists, nodead, nomod] Healing Wave, Healing Wave",
-        "/castsequence [@focus, exists, nodead, mod:ctrl][@Party1, exists, nodead, mod:shift] Chain Heal, Chain Heal, Chain Heal",
+        "/castsequence [@focus, exists, nodead, nomod][@Party1, exists, nodead, nomod] Healing Wave",
+        "/castsequence [@focus, exists, nodead, mod:ctrl][@Party1, exists, nodead, mod:ctrl] Chain Heal",
         "/cast [@player, combat] Healing Rain",
         "/cast [@player, combat] Gift of the Queen",
       PostMacro={
@@ -57,8 +58,8 @@ Sequences['Restoration_Test'] = {
       KeyRelease={
         "/cast [combat] Healing Stream Totem",
         "/cast [combat] Blood Fury",
+        "/cast [combat] Berserking",
       },
-    },    
+    },
   },
 }
-
