@@ -3,9 +3,11 @@
   <ObjectType>ISBoxer_Toolkit.Configs.WoWMacro</ObjectType>
   <SerializedObject>&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;WoWMacro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;MacroCommands&gt;/use Bloodhunter's Quarry
+  &lt;MacroCommands&gt;/use Argunite Cluster
+/use Bloodhunter's Quarry
 /use Brittle Krokul Chest
 /use Butchered Meat
+/use Cache of Fel Treasures
 /use Dreamweaver Cache
 /use Dreamweaver Provisions
 /use Farondis Chest
@@ -13,6 +15,7 @@
 /use Found Sack of Gems
 /use Gilded Trunk
 /use Gleaming Footlocker
+/use Greater Tribute of the Broken Isles
 /use Harvested Goods
 /use Highmountain Supplies
 /use Highmountain Tribute
