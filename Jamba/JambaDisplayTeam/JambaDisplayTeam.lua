@@ -1318,18 +1318,7 @@ local function SettingsCreateDisplayOptions( top )
 		L["Show Team List Title"]
 	)	
 	movingTop = movingTop - checkBoxHeight - verticalSpacing
-	AJM.settingsControl.displayOptionsCharactersPerBar = JambaHelperSettings:CreateSlider( 
-		AJM.settingsControl, 
-		halfWidthSlider, 
-		left, 
-		movingTop, 
-		L["Characters Per Bar"]
-	)
-	AJM.settingsControl.displayOptionsCharactersPerBar:SetSliderValues( 1, 10, 1 )
-	AJM.settingsControl.displayOptionsCharactersPerBar:SetCallback( "OnValueChanged", AJM.SettingsChangeCharactersPerBar )
-	--movingTop = movingTop - sliderHeight - sectionSpacing
-	
---[[	AJM.settingsControl.displayOptionsCheckBoxStackVertically = JambaHelperSettings:CreateCheckBox( 
+	AJM.settingsControl.displayOptionsCheckBoxStackVertically = JambaHelperSettings:CreateCheckBox( 
 		AJM.settingsControl, 
 		headingWidth, 
 		left, 
@@ -1339,6 +1328,9 @@ local function SettingsCreateDisplayOptions( top )
 		L["Stack Bars Vertically"]
 	)
 	movingTop = movingTop - checkBoxHeight - verticalSpacing
+
+--[[	movingTop = movingTop - sliderHeight - sectionSpacing	
+	
 	AJM.settingsControl.displayOptionsCheckBoxTeamHorizontal = JambaHelperSettings:CreateCheckBox( 
 		AJM.settingsControl, 
 		headingWidth, 
@@ -1348,10 +1340,21 @@ local function SettingsCreateDisplayOptions( top )
 		AJM.SettingsToggleTeamHorizontal,
 		L["Display Team List Horizontally"]
 	)
-	movingTop = movingTop - checkBoxHeight - verticalSpacing
-]]	
 
-	--movingTop = movingTop - checkBoxHeight - verticalSpacing
+	movingTop = movingTop - checkBoxHeight - verticalSpacing
+ ]]	
+
+	AJM.settingsControl.displayOptionsCharactersPerBar = JambaHelperSettings:CreateSlider( 
+		AJM.settingsControl, 
+		halfWidthSlider, 
+		left, 
+		movingTop, 
+		L["Characters Per Bar"]
+	)
+	AJM.settingsControl.displayOptionsCharactersPerBar:SetSliderValues( 1, 10, 1 )
+	AJM.settingsControl.displayOptionsCharactersPerBar:SetCallback( "OnValueChanged", AJM.SettingsChangeCharactersPerBar )
+
+	
 	AJM.settingsControl.displayOptionsTeamListScaleSlider = JambaHelperSettings:CreateSlider( 
 		AJM.settingsControl, 
 		halfWidthSlider, 
@@ -1362,6 +1365,7 @@ local function SettingsCreateDisplayOptions( top )
 	AJM.settingsControl.displayOptionsTeamListScaleSlider:SetSliderValues( 0.5, 2, 0.01 )
 	AJM.settingsControl.displayOptionsTeamListScaleSlider:SetCallback( "OnValueChanged", AJM.SettingsChangeScale )
 	movingTop = movingTop - sliderHeight - verticalSpacing
+
 	AJM.settingsControl.displayOptionsTeamListTransparencySlider = JambaHelperSettings:CreateSlider( 
 		AJM.settingsControl, 
 		halfWidthSlider, 
@@ -1806,7 +1810,7 @@ function AJM:SettingsRefresh()
 	AJM.settingsControl.displayOptionsCheckBoxHideTeamListInCombat:SetValue( AJM.db.hideTeamListInCombat )
 	AJM.settingsControl.displayOptionsCheckBoxEnableClique:SetValue( AJM.db.enableClique )
 	AJM.settingsControl.displayOptionsCharactersPerBar:SetValue( AJM.db.charactersPerRow )
---	AJM.settingsControl.displayOptionsCheckBoxStackVertically:SetValue( AJM.db.barsAreStackedVertically )
+	AJM.settingsControl.displayOptionsCheckBoxStackVertically:SetValue( AJM.db.barsAreStackedVertically )
 --	AJM.settingsControl.displayOptionsCheckBoxTeamHorizontal:SetValue( AJM.db.teamListHorizontal )
 	AJM.settingsControl.displayOptionsCheckBoxShowListTitle:SetValue( AJM.db.showListTitle )
 	AJM.settingsControl.displayOptionsCheckBoxOlnyShowInParty:SetValue( AJM.db.olnyShowInParty )
@@ -1863,7 +1867,7 @@ function AJM:SettingsRefresh()
 		AJM.settingsControl.displayOptionsCheckBoxHideTeamListInCombat:SetDisabled( not AJM.db.showTeamList )
 		AJM.settingsControl.displayOptionsCheckBoxEnableClique:SetDisabled( not AJM.db.showTeamList )
 		AJM.settingsControl.displayOptionsCharactersPerBar:SetDisabled(not AJM.db.showTeamList )
-		--AJM.settingsControl.displayOptionsCheckBoxStackVertically:SetDisabled( not AJM.db.showTeamList )
+		AJM.settingsControl.displayOptionsCheckBoxStackVertically:SetDisabled( not AJM.db.showTeamList )
 		--AJM.settingsControl.displayOptionsCheckBoxTeamHorizontal:SetDisabled( not AJM.db.showTeamList )
 		AJM.settingsControl.displayOptionsCheckBoxShowListTitle:SetDisabled( not AJM.db.showTeamList )
 		AJM.settingsControl.displayOptionsCheckBoxOlnyShowInParty:SetDisabled( not AJM.db.showTeamList )
@@ -1940,8 +1944,8 @@ function AJM:JambaOnSettingsReceived( characterName, settings )
 		AJM.db.hideTeamListInCombat = settings.hideTeamListInCombat
 		AJM.db.enableClique = settings.enableClique
 		AJM.db.charactersPerRow = settings.charactersPerRow
-		--AJM.db.barsAreStackedVertically = settings.barsAreStackedVertically
-		--AJM.db.teamListHorizontal = settings.teamListHorizontal
+		AJM.db.barsAreStackedVertically = settings.barsAreStackedVertically
+		AJM.db.teamListHorizontal = settings.teamListHorizontal
 		AJM.db.showListTitle = settings.showListTitle
 		AJM.db.olnyShowInParty = settings.olnyShowInParty
 		AJM.db.healthManaOutOfParty = settings.healthManaOutOfParty
@@ -2039,12 +2043,13 @@ function AJM:SettingsChangeCharactersPerBar( event, value )
 	AJM:SettingsRefresh()
 end
 
---[[
-function AJM:SettingsToggleStackVertically( event, checked )
-	AJM.db.barsAreStackedVertically = checked
-	AJM:SettingsRefresh()
-end
 
+function AJM:SettingsToggleStackVertically( event, checked )
+	AJM.db.barsAreStackedVertically = checked;
+	AJM.db.teamListHorizontal = checked;
+	AJM:SettingsRefresh();
+end
+--[[
 function AJM:SettingsToggleTeamHorizontal( event, checked )
 	AJM.db.teamListHorizontal = checked
 	AJM:SettingsRefresh()
