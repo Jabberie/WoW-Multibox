@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Box xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ObjectType>ISBoxer_Toolkit.Configs.WoWMacroSet</ObjectType>
+  <SerializedObject>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;WoWMacroSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Name&gt;UseAllCaches&lt;/Name&gt;
+  &lt;WoWMacros&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands /&gt;
+      &lt;ColloquialName&gt;---------------------------------------------------  &lt;/ColloquialName&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/click UseCaches1
+/click UseCaches2
+/click UseCaches3
+/click UseCaches4
+/click UseCaches5
+/click UseCaches6
+/click UseCaches7
+/click UseCaches8
+/click UseCaches9
+/click UseCaches10
+/click UseCaches11&lt;/MacroCommands&gt;
+      &lt;Name&gt;UseAllCaches&lt;/Name&gt;
+      &lt;ColloquialName&gt;UseCaches&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands /&gt;
+      &lt;ColloquialName&gt;---------------------------------------------------   &lt;/ColloquialName&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/use A Bulging Coin Purse
+/use A Crazy Grab Bag
+/use A Dingy Fanny Pack
+/use A Sack of Coins
+/use A Small Container of Gems
+/use Ahn'Qiraj War Effort Supplies
+/use Alchemist's Cache
+/use Aldor Supplies Package
+/use Amber Encased Treasure Pouch
+/use Arathor Advanced Care Package
+/use Arathor Basic Care Package
+/use Arathor Standard Care Package
+/use Arcane Tarot
+/use Arcane Trove
+/use Ashen Sack of Gems
+/use Bag of Empty Ooze Containers
+/use Bag of Fishing Treasures
+/use Bag of Shiny Things
+/use Barrel of Fish
+/use Battered Chest
+/use Battered Junkbox
+/use Big Bag of Arms
+/use Big Bag of Food
+/use Big Bag of Herbs
+/use Big Bag of Jewels
+/use Big Bag of Linens
+/use Big Bag of Mysteries
+/use Big Bag of Skins
+/use Big Bag of Wonders
+/use Blingtron 4000 Gift Package
+/use Bloated Barbed Gill Trout
+/use Bloated Catfish
+/use Bloated Giant Sunfish
+/use Bloated Mud Snapper
+/use Bloated Redgill
+/use Bloated Rockscale Cod
+/use Bloated Salmon
+/use Bloated Smallfish
+/use Bloated Trout
+/use Bounty of a Sundered Land
+/use Box of Bombs
+/use Box of Goodies&lt;/MacroCommands&gt;
+      &lt;Name&gt;UseCaches1&lt;/Name&gt;
+      &lt;ColloquialName&gt;UseCaches 1&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/use Box of Supplies
+/use Brawler's Pet Supplies
+/use Brawler's Purse
+/use Brazie's Black Book of Secrets
+/use Brilliant Glass
+/use Brooding Darkwater Clam
+/use Bundle of Nether Spikes
+/use Cache of Mogu Riches
+/use Cache of Sha-Touched Gold
+/use Cache of Treasures
+/use Cannary's Cache
+/use Celestial Treasure Box
+/use Cluster Rocket Recipes
+/use Coalesced Turmoil
+/use Colossal Bag of Loot
+/use Corrupt Tested Sample
+/use Covert Ops Pack
+/use Cracked Egg
+/use Cracked Primal Egg
+/use Crate of Tasty Meat
+/use Crudely Wrapped Gift
+/use Cuergo's Hidden Treasure
+/use Curious Crate
+/use Curious Ticking Parcel
+/use Darkmoon Pet Supplies
+/use Defiler's Advanced Care Package
+/use Defiler's Basic Care Package
+/use Defiler's Standard Care Package
+/use Demon Kissed Sack
+/use Dented Crate
+/use Dividends of the Everlasting Spring
+/use Elementium Lockbox
+/use Emerald Encrusted Chest
+/use Eternium Lockbox
+/use Fabled Pandaren Pet Supplies
+/use Facets of Research
+/use Fire Prism
+/use Flame-Scarred Cache of Offerings
+/use Flame-Scarred Junkbox
+/use Froststeel Lockbox&lt;/MacroCommands&gt;
+      &lt;Name&gt;UseCaches2&lt;/Name&gt;
+      &lt;ColloquialName&gt;UseCaches 2&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/use Ghost Iron Lockbox
+/use Giant Sack
+/use Golden Chest of the Betrayer
+/use Golden Chest of the Cycle
+/use Golden Chest of the Elemental Triad
+/use Golden Chest of the Golden King
+/use Golden Chest of the Holy Warrior
+/use Golden Chest of the Howling Beast
+/use Golden Chest of the Lich Lord
+/use Golden Chest of the Light
+/use Golden Chest of the Regal Lord
+/use Golden Chest of the Silent Assassin
+/use Golden Chest of Windfury
+/use Greater Cache of Treasures
+/use Greater Darkmoon Prize
+/use Gub's Catch
+/use Heart-Shaped Box
+/use Heavy Bronze Lockbox
+/use Cache of Sha-Touched Gold
+/use Cache of Treasures
+/use Cannary's Cache
+/use Celestial Treasure Box
+/use Cluster Rocket Recipes
+/use Coalesced Turmoil
+/use Colossal Bag of Loot
+/use Corrupt Tested Sample
+/use Covert Ops Pack
+/use Cracked Egg
+/use Cracked Primal Egg
+/use Crate of Tasty Meat
+/use Crudely Wrapped Gift
+/use Cuergo's Hidden Treasure
+/use Curious Crate
+/use Curious Ticking Parcel
+/use Darkmoon Pet Supplies
+/use Defiler's Advanced Care Package
+/use Defiler's Basic Care Package&lt;/MacroCommands&gt;
+      &lt;Name&gt;UseCaches3&lt;/Name&gt;
+      &lt;ColloquialName&gt;UseCaches 3&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/use Defiler's Standard Care Package
+/use Demon Kissed Sack
+/use Dented Crate
+/use Dividends of the Everlasting Spring
+/use Elementium Lockbox
+/use Emerald Encrusted Chest
+/use Eternium Lockbox
+/use Fabled Pandaren Pet Supplies
+/use Facets of Research
+/use Fire Prism
+/use Flame-Scarred Cache of Offerings
+/use Flame-Scarred Junkbox
+/use Froststeel Lockbox
+/use Ghost Iron Lockbox
+/use Giant Sack
+/use Golden Chest of the Betrayer
+/use Golden Chest of the Cycle
+/use Golden Chest of the Elemental Triad
+/use Golden Chest of the Golden King
+/use Golden Chest of the Holy Warrior
+/use Golden Chest of the Howling Beast
+/use Golden Chest of the Lich Lord
+/use Golden Chest of the Light
+/use Golden Chest of the Regal Lord
+/use Golden Chest of the Silent Assassin
+/use Golden Chest of Windfury
+/use Greater Cache of Treasures
+/use Greater Darkmoon Prize
+/use Gub's Catch
+/use Heart-Shaped Box
+/use Heavy Bronze Lockbox
+/use Heavy Crate
+/use Heavy Junkbox
+/use Heavy Supply Crate
+/use Hidden Stash
+/use Hive Queen's Honeycomb
+/use Hoard of the Black Dragonflight&lt;/MacroCommands&gt;
+      &lt;Name&gt;UseCaches4&lt;/Name&gt;
+      &lt;ColloquialName&gt;UseCaches 4&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/use Hollowed Bone Decanter
+/use Hyldnir Spoils
+/use Icy Prism
+/use Imported Supplies
+/use Inscribed Scrollcase
+/use Iron Bound Trunk
+/use Iron Lockbox
+/use Ironbound Locked Chest
+/use Keg-Shaped Treasure Chest
+/use Khorium Lockbox
+/use Kor'kron Shaman's Treasure
+/use Kovic's Trading Satchel
+/use Kum'isha's Junk
+/use Landro's Pet Box
+/use Lard's Special Picnic Basket
+/use Large Cluster Rocket Recipes
+/use Large Rocket Recipes
+/use Large Sack of Ulduar Spoils
+/use Large Satchel of Spoils
+/use Lesser Darkmoon Prize
+/use Loot-Filled Pumpkin
+/use Lucky Box of Greatness
+/use Lucky Red Envelope
+/use Magically Wrapped Gift
+/use Master Chef's Groceries
+/use Minor Darkmoon Prize
+/use Misty Satchel of Exotic Mysteries
+/use Mithril Bound Trunk
+/use Mithril Lockbox
+/use Mr. Pinchy's Gift
+/use Mysterious Lockbox
+/use Mysterious Tarot
+/use Nolkai's Box
+/use Northrend Mystery Gem Pouch
+/use Notes on Lightning Steel
+/use Ogri'la Care Package
+/use Old Man Thistle's Treasure
+/use Oozing Bag
+/use Ornate Bronze Lockbox
+/use Outcast's Cache&lt;/MacroCommands&gt;
+      &lt;Name&gt;UseCaches5&lt;/Name&gt;
+      &lt;ColloquialName&gt;UseCaches 5&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/use Outrider Advanced Care Package
+/use Outrider Basic Care Package
+/use Outrider Standard Care Package
+/use Package of Empty Ooze Containers
+/use Pandaren Spirit Pet Supplies
+/use Patroller's Pack
+/use Pirate's Footlocker
+/use Plump Intestines
+/use Plundered Treasure
+/use Pocket Full of Snow
+/use Reinforced Crate
+/use Reinforced Junkbox
+/use Reinforced Locked Chest
+/use Reinforced Steel Lockbox
+/use Ripe Disgusting Jar
+/use Ruined Jumper Cables
+/use Sack of Crocolisk Belly
+/use Sack of Emperor Salmon
+/use Sack of Frosty Treasures
+/use Sack of Giant Mantis Shrimp
+/use Sack of Golden Carp
+/use Sack of Green Cabbages
+/use Sack of Jade Lungfish
+/use Sack of Jade Squash
+/use Sack of Jewel Danio
+/use Sack of Juicycrunch Carrots
+/use Sack of Krasarang Paddlefish
+/use Sack of Mogu Pumpkins
+/use Sack of Mushan Ribs
+/use Sack of Pet Supplies
+/use Sack of Pink Turnips
+/use Sack of Raw Crab Meat
+/use Sack of Raw Tiger Steaks
+/use Sack of Raw Turtle Meat
+/use Sack of Red Blossom Leeks
+/use Sack of Redbelly Mandarin
+/use Sack of Reef Octopus&lt;/MacroCommands&gt;
+      &lt;Name&gt;UseCaches6&lt;/Name&gt;
+      &lt;ColloquialName&gt;UseCaches 6&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/use Sack of Scallions
+/use Sack of Striped Melons
+/use Sack of Tiger Gourami
+/use Sack of Ulduar Spoils
+/use Sack of White Turnips
+/use Sack of Wildfowl Breasts
+/use Sack of Witchberries
+/use Satchel of Chilled Goods
+/use Satchel of Cosmic Mysteries
+/use Satchel of Exotic Mysteries
+/use Satchel of Freshly-Picked Herbs
+/use Satchel of Helpful Goods
+/use Satchel of Spoils
+/use Scorched Rocket Boots
+/use Scryer Supplies Package
+/use Scum Covered Bag
+/use Sealed Crate
+/use Sealed Scroll Case
+/use Sentinel Advanced Care Package
+/use Sentinel Basic Care Package
+/use Sentinel Standard Care Package
+/use Shadowy Tarot
+/use Shattered Sun Supplies
+/use Shiny Pile of Refuse
+/use Silkworm Cocoon
+/use Slimy Bag
+/use Small Chest
+/use Small Locked Chest
+/use Small Spice Bag
+/use Spectral Mount Crate
+/use Spoils of Theramore
+/use Standard Apothecary Serving Kit
+/use Steel Lockbox
+/use Stolen Present
+/use Stormtouched Cache
+/use Strange Bloated Stomach
+/use Strange Tarot
+/use Strong Iron Lockbox
+/use Strong Junkbox
+/use Sturdy Junkbox
+/use Sturdy Locked Chest&lt;/MacroCommands&gt;
+      &lt;Name&gt;UseCaches7&lt;/Name&gt;
+      &lt;ColloquialName&gt;UseCaches 7&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/use Sunreaver Bounty
+/use Thaurissan Family Jewels
+/use Thorium Lockbox
+/use Tightly Sealed Trunk
+/use Tiny Titanium Lockbox
+/use Tiny Treasure Chest
+/use Titanium Lockbox
+/use Tome of the Crane
+/use Tome of the Serpent
+/use Tome of the Tiger
+/use Torwa's Pouch
+/use Treasures from Grim Batol
+/use Twisted Treasures of the Vale
+/use Unclaimed Black Market Container
+/use Un'Goro Tested Sample
+/use Unsealed Chest
+/use Vine-Cracked Junkbox
+/use Voren'thal's Package
+/use Water-Filled Gills
+/use Waterlogged Crate
+/use Watertight Trunk
+/use Winner's Reward
+/use Worn Junkbox
+/use Zen'Vorka's Cache
+/use Argunite Cluster
+/use Bloodhunter's Quarry
+/use Brittle Krokul Chest
+/use Butchered Meat
+/use Cache of Fel Treasures
+/use Dreamweaver Cache
+/use Dreamweaver Provisions
+/use Farondis Chest
+/use Farondis Lockbox
+/use Found Sack of Gems
+/use Gilded Trunk
+/use Gleaming Footlocker
+/use Greater Tribute of the Broken Isles
+/use Harvested Goods
+/use Highmountain Supplies
+/use Highmountain Tribute
+/use Icy Satchel of Helpful Goods
+/use Kirin Tor Chest&lt;/MacroCommands&gt;
+      &lt;Name&gt;UseCaches8&lt;/Name&gt;
+      &lt;ColloquialName&gt;UseCaches 8&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/use Legionfall Recompense
+/use Legionfall Spoils
+/use Light's Fortune
+/use Mana-Tinged Pack
+/use Nightfallen Cache
+/use Nightfallen Hoard
+/use Pile of Pet Goodies
+/use Salvaged Armor
+/use Satchel of Helpful Goods
+/use Scavenged Cloth
+/use Scorched Satchel of Helpful Goods
+/use Scuffed Krokul Cache
+/use Sprocket Container
+/use Tranquil Satchel of Helpful Goods
+/use Valarjar Cache
+/use Valarjar Strongbox
+/use Warden's Field Kit
+/use Warden's Supply Kit
+/use Wyrmtongue Cache of Finery
+/use Wyrmtongue Cache of Herbs
+/use Wyrmtongue Cache of Magic
+/use Wyrmtongue Cache of Minerals
+/use Wyrmtongue Cache of Shiny Things
+/use Champion Equipment
+/use Wyrmtongue Cache of Skins
+/use Wyrmtongue Cache of Supplies&lt;/MacroCommands&gt;
+      &lt;Name&gt;UseCaches9&lt;/Name&gt;
+      &lt;ColloquialName&gt;UseCaches 9&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands /&gt;
+      &lt;Name&gt;UseCaches10&lt;/Name&gt;
+      &lt;ColloquialName&gt;UseCaches 10&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands /&gt;
+      &lt;Name&gt;UseCaches11&lt;/Name&gt;
+      &lt;ColloquialName&gt;UseCaches 11&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands /&gt;
+      &lt;ColloquialName&gt;---------------------------------------------------    &lt;/ColloquialName&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+  &lt;/WoWMacros&gt;
+&lt;/WoWMacroSet&gt;</SerializedObject>
+</Box>
