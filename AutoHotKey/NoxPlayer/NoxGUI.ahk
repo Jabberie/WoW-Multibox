@@ -10,36 +10,77 @@ Get handles to all windows for a given executable and load them into an object.
 winget, winList, list, ahk_exe nox.exe
 oWinList := object()
 loop, % winlist
-{
-oWinList.push(winlist%A_Index%)
-}
+{	
+	ahkid := winlist%A_Index%
+	WinGetPos, , , W, H, ahk_id %ahkid%	
 
+	delta := W/H
+
+	if delta < 0.1 then	
+	{
+		;msgbox NO %delta% %W% %H% 
+		Continue
+	}
+	else 
+	{
+		;msgbox YES %delta% %W% %H% 
+		oWinList.push(winlist%A_Index%)
+	}
+}
 /*
 ==========================================================================
 Interprets the "ControlClick" command into a broadcastable function.
 ==========================================================================
 */
-SendClickToWindows(objWindows, x, y, WhichButton := "LEFT", ClickCount := 1, Options := "")
+SendClickToWindows(objWindows, xx, yy, WhichButton := "LEFT", ClickCount := 1, Options := "")
 {
     SetControlDelay, -1
-
     for index, winID in objWindows
-    {
-/*    	ControlGetPos, , , getW, getH, , ahk_id %winID%
-
-    	newX := getW * x
-    	newY := getH * y
-
-    	msgbox %winID%`nW%getW%`tH%getH%`nX%newX%`tY%newY%
-
-        ControlClick, x%newX% y%newY%, ahk_id %winID%, , %WhichButton%, %ClickCount%, %options%
-*/
-        ControlClick, x%X% y%Y%, ahk_id %winID%, , %WhichButton%, %ClickCount%, %options%
+    {	
+		WinGetPos, , , Width, Height, ahk_id %winID%
+		xCoOrd := Width * xx
+		yCoOrd := Height * yy
+		;msgbox %Width%, %Height%, %winID% `nx%xx% y%yx% `nx%xCoOrd% y%yCoOrd%
+		ControlClick, x%xCoOrd% y%yCoOrd%, ahk_id %winID%, , %WhichButton%, %ClickCount%, %options%
     }
-}
+    ;msgbox %Width%, %Height%, %winID% `nx%xx% y%yy% `nx%xCoOrd% y%yCoOrd%
+}	
 
+;;;;;; Variables
 
-xLoop := [180, 210, 230, 252, 275, 300]
+middle = 0.5
+
+; bottom Buttons
+bottomY 	= 	0.94
+bottomX1 	= 	0.17
+bottomX2 	=	0.32
+bottomX3 	:=	middle
+bottomX4 	=	0.68
+bottomX5 	=	0.84
+
+; top bar
+topBarY		=	0.1
+topBarX		:=	middle
+; char List
+charlistY	=	0.42
+charlistX	:=	middle
+; char list tow
+rowY1	=	0.19
+rowY2	=	0.30
+rowY3	=	0.40
+rowY4	=	0.52
+rowY5	=	0.63
+rowY6	=	0.74
+rowY7	=	0.84
+; collection
+collectX := [0.48, 0.54, 0.61, 0.67, 0.73, 0.79, 0.86] 
+collectY := [0.78, 0.82, 0.60, 0.64, 0.67, 0.72, 0.38, 0.43, 0.45, 0.50, 0.21, 0.28] 
+; delay
+sleepdelay = 120
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+f10::
+	Reload
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [::
 	Gui, Destroy
@@ -60,15 +101,14 @@ xLoop := [180, 210, 230, 252, 275, 300]
 	
 	Gui, Add, Button, xm y+5 	w95 h25 gCharacterList, Character List
 	Gui, Add, Button, x+5 yp 	w95 h25 gTurnInMission, Turn in Mission
-	Gui, Add, Button, x+5 yp 	w95 h25 gCloseMission, Close Mission
 
 	Gui, Add, Text, xm y+5 w370 h1 0x7	
 
-	Gui, Add, Button, xm y+5 	w70 h25 gCollectRow1, Collect All
-	Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow1, Collect R1
-	Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow2, Collect R2
-	Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow3, Collect R3
-	Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow4, Collect R4
+	Gui, Add, Button, xm y+5 	w70 h25 gCollectRowAll, Collect All
+	;Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow1, Collect R1
+	;Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow2, Collect R2
+	;Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow3, Collect R3
+	;Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow4, Collect R4
 
 
 	Gui, Add, Text, xm y+5 w370 h1 0x7	
@@ -88,156 +128,96 @@ xLoop := [180, 210, 230, 252, 275, 300]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 OpenApp:
 	Gui, Submit, NoHide
-	SendClickToWindows(oWinList, 310, 340)
+	SendClickToWindows(oWinList, 0.89, 0.57)
 	return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 CharacterList:
 	Gui, Submit, NoHide
-	SendClickToWindows(oWinList, 174, 560)
-	sleep 50
-    SendClickToWindows(oWinList, 150, 50)
-    sleep 50
-    SendClickToWindows(oWinList, 150, 250)
+	SendClickToWindows(oWinList, middle, bottomY)
+	sleep %sleepdelay%
+    SendClickToWindows(oWinList, middle, topBarY)
+    sleep %sleepdelay%
+    SendClickToWindows(oWinList, middle, charlistY)
 	return
 TurnInMission:
 	Gui, Submit, NoHide
-    SendClickToWindows(oWinList, 55, 480)
-	return
-CloseMission:
-	Gui, Submit, NoHide
-    SendClickToWindows(oWinList, 320, 115)
+    SendClickToWindows(oWinList, bottomX1, 0.79)
+    sleep %sleepdelay%
+    sleep %sleepdelay%
+    sleep %sleepdelay%
+    SendClickToWindows(oWinList, 0.92, 0.18)
 	return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 Missions:
 	Gui, Submit, NoHide
 	; 0.17
-    SendClickToWindows(oWinList, 70, 570)
+    SendClickToWindows(oWinList, bottomX1, bottomY)
 	return
 Recruits:
 	Gui, Submit, NoHide
 	; 0.33
-    SendClickToWindows(oWinList, 110, 570)
+    SendClickToWindows(oWinList, bottomX2, bottomY)
 	return
 Map:
 	Gui, Submit, NoHide
 	; 0.50
-    SendClickToWindows(oWinList, 174, 560)
+    SendClickToWindows(oWinList, bottomX3, bottomY)
 	return
 Champs:
 	Gui, Submit, NoHide
 	; 0.66
-    SendClickToWindows(oWinList, 230, 570)
+    SendClickToWindows(oWinList, bottomX4, bottomY)
 	return
 ClassHall:
 	Gui, Submit, NoHide
 	; 0.83
-    SendClickToWindows(oWinList, 290, 570)
+    SendClickToWindows(oWinList, bottomX5, bottomY)
 	return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 Row1:
 	Gui, Submit, NoHide
-    SendClickToWindows(oWinList, 174, 120)
+    SendClickToWindows(oWinList, middle, rowY1)
 	return
-
-	Gui, Submit, NoHide
 Row2:
 	Gui, Submit, NoHide
-    SendClickToWindows(oWinList, 174, 185)
+    SendClickToWindows(oWinList, middle, rowY2)
 	return
 Row3:
 	Gui, Submit, NoHide
-    SendClickToWindows(oWinList, 174, 250)
+    SendClickToWindows(oWinList, middle, rowY3)
 	return
 Row4:
 	Gui, Submit, NoHide
-    SendClickToWindows(oWinList, 174, 315)
+    SendClickToWindows(oWinList, middle, rowY4)
 	return
 Row5:
 	Gui, Submit, NoHide
-    SendClickToWindows(oWinList, 174, 380)
+    SendClickToWindows(oWinList, middle, rowY5)
 	return	
 Row6:
 	Gui, Submit, NoHide
-    SendClickToWindows(oWinList, 174, 445)
+    SendClickToWindows(oWinList, middle, rowY6)
 	return	
 Row7:
 	Gui, Submit, NoHide
-    SendClickToWindows(oWinList, 174, 510)
+    SendClickToWindows(oWinList, middle, rowY7)
 	return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-CollectAllRows:
-	goto CollectRow4
-	goto CollectRow3
-	goto CollectRow2
-	goto CollectRow1
+CollectRowAll:
+	Gui, Submit, NoHide
+	for i, j in collectY
+	{
+		for k, l in collectX
+		{
+			SendClickToWindows(oWinList, l, j)
+			sleep %sleepdelay%
+		}
+		sleep %sleepdelay%
+	}
+
+	SplashTextOn,45,, Done!
+	Sleep 1500
+	SplashTextOff
 	return
-CollectRow1:
-	Gui, Submit, NoHide
-	for k, v in xLoop
-	{
-			SendClickToWindows(oWinList, v, 130)
-			sleep 50
-			SendClickToWindows(oWinList, v, 150)
-			sleep 50
-	}
-	loop, 4
-	{
-		SendClickToWindows(oWinList, 230, 170)
-		sleep 50
-		SendClickToWindows(oWinList, 230, 190)
-		sleep 50
-	}
-	return
-CollectRow2:
-	Gui, Submit, NoHide
-	for k, v in xLoop
-	{
-			SendClickToWindows(oWinList, v, 230)
-			sleep 50
-			SendClickToWindows(oWinList, v, 260)
-			sleep 50
-	}
-	loop, 4
-	{
-		SendClickToWindows(oWinList, 230, 270)
-		sleep 50
-		SendClickToWindows(oWinList, 230, 300)
-		sleep 50
-	}
-CollectRow3:
-	Gui, Submit, NoHide
-	for k, v in xLoop
-	{
-			SendClickToWindows(oWinList, v, 360)
-			sleep 50
-			SendClickToWindows(oWinList, v, 380)
-			sleep 50
-	}
-	loop, 4
-	{
-		SendClickToWindows(oWinList, 230, 400)
-		sleep 50
-		SendClickToWindows(oWinList, 230, 420)
-		sleep 50
-	}
-	return
-CollectRow4:
-	Gui, Submit, NoHide
-	for k, v in xLoop
-	{
-			SendClickToWindows(oWinList, v, 460)
-			sleep 50
-			SendClickToWindows(oWinList, v, 480)
-			sleep 50
-	}
-	loop, 4
-	{
-		SendClickToWindows(oWinList, 230, 500)
-		sleep 50
-		SendClickToWindows(oWinList, 230, 520)
-		sleep 50
-	}
-	return	
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-F10::
-	Reload
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
