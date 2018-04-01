@@ -46,6 +46,21 @@ SendClickToWindows(objWindows, xx, yy, WhichButton := "LEFT", ClickCount := 1, O
     ;msgbox %Width%, %Height%, %winID% `nx%xx% y%yy% `nx%xCoOrd% y%yCoOrd%
 }	
 
+/*
+==========================================================================
+Interprets the "ControlClick" command into a broadcastable function.
+==========================================================================
+*/
+SendClickToWindow(objWindows, windowNumber, xxx, yyy, WhichButtons := "LEFT", ClickCounts := 1, Optionss := "")
+{
+    SetControlDelay, -1
+    singleID := objWindows[windowNumber]
+	WinGetPos, , , Widthx, Heighty, ahk_id %singleID%
+	xCoOrdx := Widthx * xxx
+	yCoOrdy := Heighty * yyy
+	ControlClick, x%xCoOrdx% y%yCoOrdy%, ahk_id %singleID%, , %WhichButtons%, %ClickCounts%, %optionss%
+}
+
 ;;;;;; Variables
 
 middle = 0.5
@@ -88,6 +103,10 @@ f10::
 	Gui, font, s8, Verdana 
 
 	Gui, Add, Button, xm ym 	w70 h25 gOpenApp, Open App
+	Gui, Add, Button, x+5 yp 	w95 h25 gCharacterList, Character List
+	Gui, Add, Button, x+5 yp 	w95 h25 gTurnInMission, Turn in Mission
+	Gui, Add, Button, x+5 yp 	w95 h25 gCollectRowAll, Collect All
+
 
 	Gui, Add, Text, xm y+5 w370 h1 0x7
 
@@ -97,14 +116,15 @@ f10::
 	Gui, Add, Button, x+5 yp 	w70 h25 gChamps, Followers
 	Gui, Add, Button, x+5 yp 	w70 h25 gClassHall, Research
 
-	Gui, Add, Text, xm y+5 w370 h1 0x7
+	;Gui, Add, Text, xm y+5 w370 h1 0x7
 	
-	Gui, Add, Button, xm y+5 	w95 h25 gCharacterList, Character List
-	Gui, Add, Button, x+5 yp 	w95 h25 gTurnInMission, Turn in Mission
+	;Gui, Add, Button, xm y+5 	w95 h25 gCharacterList, Character List
+	;Gui, Add, Button, x+5 yp 	w95 h25 gTurnInMission, Turn in Mission
+	;Gui, Add, Button, x+5 yp 	w95 h25 gCollectRowAll, Collect All
 
-	Gui, Add, Text, xm y+5 w370 h1 0x7	
+	;Gui, Add, Text, xm y+5 w370 h1 0x7	
 
-	Gui, Add, Button, xm y+5 	w70 h25 gCollectRowAll, Collect All
+	;Gui, Add, Button, xm y+5 	w70 h25 gCollectRowAll, Collect All
 	;Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow1, Collect R1
 	;Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow2, Collect R2
 	;Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow3, Collect R3
@@ -122,6 +142,15 @@ f10::
 	Gui, Add, Button, x+5 yp 	w48 h25 gRow7, Row 7
 	
 	Gui, Add, Text, xm y+5 w370 h1 0x7
+
+	;Gui, Add, Button, xm y+5 	w48 h25 gTeam1, Team 1
+	;Gui, Add, Button, x+5 yp 	w48 h25 gTeam2, Team 2
+	;Gui, Add, Button, x+5 yp 	w48 h25 gTeam3, Team 3
+	;Gui, Add, Button, x+5 yp 	w48 h25 gTeam4, Team 4
+	;Gui, Add, Button, x+5 yp 	w48 h25 gTeam5, Team 5
+	;Gui, Add, Button, x+5 yp 	w48 h25 gTeam6, Team 6
+	;Gui, Add, Button, x+5 yp 	w48 h25 gTeam7, Team 7
+	
 
 	Gui, Show
 	return
@@ -142,9 +171,11 @@ CharacterList:
 TurnInMission:
 	Gui, Submit, NoHide
     SendClickToWindows(oWinList, bottomX1, 0.79)
-    sleep %sleepdelay%
-    sleep %sleepdelay%
-    sleep %sleepdelay%
+
+    longdelay := sleepdelay * 15
+
+    sleep %longdelay%
+
     SendClickToWindows(oWinList, 0.92, 0.18)
 	return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -201,6 +232,63 @@ Row6:
 Row7:
 	Gui, Submit, NoHide
     SendClickToWindows(oWinList, middle, rowY7)
+	return
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Team1:
+	Gui, Submit, NoHide
+	SendClickToWindow(oWinList, 1, middle, rowY2)	
+	SendClickToWindow(oWinList, 2, middle, rowY5)	
+	SendClickToWindow(oWinList, 3, middle, rowY6)	
+	SendClickToWindow(oWinList, 4, middle, rowY5)	
+	SendClickToWindow(oWinList, 5, middle, rowY5)	
+	return
+Team2:
+	Gui, Submit, NoHide
+	SendClickToWindow(oWinList, 2, middle, rowY5)
+	SendClickToWindow(oWinList, 5, middle, rowY5)
+	SendClickToWindow(oWinList, 3, middle, rowY6)
+	SendClickToWindow(oWinList, 1, middle, rowY2)
+	SendClickToWindow(oWinList, 4, middle, rowY5)
+	return
+Team3:
+	Gui, Submit, NoHide
+	SendClickToWindow(oWinList, 2, middle, rowY2)
+	SendClickToWindow(oWinList, 5, middle, rowY6)
+	SendClickToWindow(oWinList, 3, middle, rowY4)
+	SendClickToWindow(oWinList, 1, middle, rowY1)
+	SendClickToWindow(oWinList, 4, middle, rowY1)
+	return
+Team4:
+	Gui, Submit, NoHide
+    SendClickToWindow(oWinList, 4, middle, rowY4)
+
+
+
+
+	return
+Team5:
+	Gui, Submit, NoHide
+    SendClickToWindow(oWinList, 5, middle, rowY5)
+
+
+
+
+	return	
+Team6:
+	Gui, Submit, NoHide
+    SendClickToWindow(oWinList, 1, middle, rowY6)
+
+
+
+
+	return	
+Team7:
+	Gui, Submit, NoHide
+    SendClickToWindow(oWinList, 1, middle, rowY7)
+
+
+
+
 	return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 CollectRowAll:
