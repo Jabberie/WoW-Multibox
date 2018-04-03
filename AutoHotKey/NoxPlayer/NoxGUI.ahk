@@ -89,71 +89,78 @@ rowY6	=	0.74
 rowY7	=	0.84
 ; collection
 collectX := [0.48, 0.54, 0.61, 0.67, 0.73, 0.79, 0.86] 
-collectY := [0.78, 0.82, 0.60, 0.64, 0.67, 0.72, 0.38, 0.43, 0.45, 0.50, 0.21, 0.28] 
+collectY := [0.78, 0.82, 0.55, 0.60, 0.65, 0.72, 0.38, 0.44, 0.50, 0.21, 0.28] 
 ; delay
 sleepdelay = 120
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Gui, Destroy
+Gui, Margin, 5, 5
+Gui, font, s8, Verdana 
+
+Gui, Add, Button, xm ym 	w70 h25 gOpenApp, Open App
+Gui, Add, Button, x+5 yp 	w95 h25 gCharacterList, Character List
+Gui, Add, Button, x+5 yp 	w95 h25 gTurnInMission, Turn in Mission
+Gui, Add, Button, x+5 yp 	w95 h25 gCollectRowAll, Collect All
+
+
+Gui, Add, Text, xm y+5 w370 h1 0x7
+
+Gui, Add, Button, xm y+5 	w70 h25 gMissions, Missions
+Gui, Add, Button, x+5 yp 	w70 h25 gRecruits, Recruit
+Gui, Add, Button, x+5 yp 	w70 h25 gMap, World Map
+Gui, Add, Button, x+5 yp 	w70 h25 gChamps, Followers
+Gui, Add, Button, x+5 yp 	w70 h25 gClassHall, Research
+
+;Gui, Add, Text, xm y+5 w370 h1 0x7
+
+;Gui, Add, Button, xm y+5 	w95 h25 gCharacterList, Character List
+;Gui, Add, Button, x+5 yp 	w95 h25 gTurnInMission, Turn in Mission
+;Gui, Add, Button, x+5 yp 	w95 h25 gCollectRowAll, Collect All
+
+;Gui, Add, Text, xm y+5 w370 h1 0x7	
+
+;Gui, Add, Button, xm y+5 	w70 h25 gCollectRowAll, Collect All
+;Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow1, Collect R1
+;Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow2, Collect R2
+;Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow3, Collect R3
+;Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow4, Collect R4
+
+
+Gui, Add, Text, xm y+5 w370 h1 0x7	
+
+Gui, Add, Button, xm y+5 	w48 h25 gRow1, Row 1
+Gui, Add, Button, x+5 yp 	w48 h25 gRow2, Row 2
+Gui, Add, Button, x+5 yp 	w48 h25 gRow3, Row 3
+Gui, Add, Button, x+5 yp 	w48 h25 gRow4, Row 4
+Gui, Add, Button, x+5 yp 	w48 h25 gRow5, Row 5
+Gui, Add, Button, x+5 yp 	w48 h25 gRow6, Row 6
+Gui, Add, Button, x+5 yp 	w48 h25 gRow7, Row 7
+
+Gui, Add, Text, xm y+5 w370 h1 0x7
+
+;Gui, Add, Button, xm y+5 	w48 h25 gTeam1, Team 1
+;Gui, Add, Button, x+5 yp 	w48 h25 gTeam2, Team 2
+;Gui, Add, Button, x+5 yp 	w48 h25 gTeam3, Team 3
+;Gui, Add, Button, x+5 yp 	w48 h25 gTeam4, Team 4
+;Gui, Add, Button, x+5 yp 	w48 h25 gTeam5, Team 5
+;Gui, Add, Button, x+5 yp 	w48 h25 gTeam6, Team 6
+;Gui, Add, Button, x+5 yp 	w48 h25 gTeam7, Team 7
+
+
+Gui, Show
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#::
+	Gui, Show
+	Return
 f10::
 	Reload
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-[::
+	Return
+GuiEscape:
 	Gui, Destroy
-	Gui, Margin, 5, 5
-	Gui, font, s8, Verdana 
-
-	Gui, Add, Button, xm ym 	w70 h25 gOpenApp, Open App
-	Gui, Add, Button, x+5 yp 	w95 h25 gCharacterList, Character List
-	Gui, Add, Button, x+5 yp 	w95 h25 gTurnInMission, Turn in Mission
-	Gui, Add, Button, x+5 yp 	w95 h25 gCollectRowAll, Collect All
-
-
-	Gui, Add, Text, xm y+5 w370 h1 0x7
-
-	Gui, Add, Button, xm y+5 	w70 h25 gMissions, Missions
-	Gui, Add, Button, x+5 yp 	w70 h25 gRecruits, Recruit
-	Gui, Add, Button, x+5 yp 	w70 h25 gMap, World Map
-	Gui, Add, Button, x+5 yp 	w70 h25 gChamps, Followers
-	Gui, Add, Button, x+5 yp 	w70 h25 gClassHall, Research
-
-	;Gui, Add, Text, xm y+5 w370 h1 0x7
-	
-	;Gui, Add, Button, xm y+5 	w95 h25 gCharacterList, Character List
-	;Gui, Add, Button, x+5 yp 	w95 h25 gTurnInMission, Turn in Mission
-	;Gui, Add, Button, x+5 yp 	w95 h25 gCollectRowAll, Collect All
-
-	;Gui, Add, Text, xm y+5 w370 h1 0x7	
-
-	;Gui, Add, Button, xm y+5 	w70 h25 gCollectRowAll, Collect All
-	;Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow1, Collect R1
-	;Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow2, Collect R2
-	;Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow3, Collect R3
-	;Gui, Add, Button, x+5 yp 	w70 h25 gCollectRow4, Collect R4
-
-
-	Gui, Add, Text, xm y+5 w370 h1 0x7	
-
-	Gui, Add, Button, xm y+5 	w48 h25 gRow1, Row 1
-	Gui, Add, Button, x+5 yp 	w48 h25 gRow2, Row 2
-	Gui, Add, Button, x+5 yp 	w48 h25 gRow3, Row 3
-	Gui, Add, Button, x+5 yp 	w48 h25 gRow4, Row 4
-	Gui, Add, Button, x+5 yp 	w48 h25 gRow5, Row 5
-	Gui, Add, Button, x+5 yp 	w48 h25 gRow6, Row 6
-	Gui, Add, Button, x+5 yp 	w48 h25 gRow7, Row 7
-	
-	Gui, Add, Text, xm y+5 w370 h1 0x7
-
-	;Gui, Add, Button, xm y+5 	w48 h25 gTeam1, Team 1
-	;Gui, Add, Button, x+5 yp 	w48 h25 gTeam2, Team 2
-	;Gui, Add, Button, x+5 yp 	w48 h25 gTeam3, Team 3
-	;Gui, Add, Button, x+5 yp 	w48 h25 gTeam4, Team 4
-	;Gui, Add, Button, x+5 yp 	w48 h25 gTeam5, Team 5
-	;Gui, Add, Button, x+5 yp 	w48 h25 gTeam6, Team 6
-	;Gui, Add, Button, x+5 yp 	w48 h25 gTeam7, Team 7
-	
-
-	Gui, Show
-	return
+	Return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 OpenApp:
 	Gui, Submit, NoHide
@@ -162,14 +169,20 @@ OpenApp:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 CharacterList:
 	Gui, Submit, NoHide
+	Gui, color, 00ff00
+	Gui, Show	
 	SendClickToWindows(oWinList, middle, bottomY)
 	sleep %sleepdelay%
     SendClickToWindows(oWinList, middle, topBarY)
     sleep %sleepdelay%
     SendClickToWindows(oWinList, middle, charlistY)
+	Gui, color, E1E1E1
+	Gui, Show    
 	return
 TurnInMission:
 	Gui, Submit, NoHide
+	Gui, color, 00ff00
+	Gui, Show
     SendClickToWindows(oWinList, bottomX1, 0.79)
 
     longdelay := sleepdelay * 15
@@ -177,6 +190,8 @@ TurnInMission:
     sleep %longdelay%
 
     SendClickToWindows(oWinList, 0.92, 0.18)
+	Gui, color, E1E1E1
+	Gui, Show    
 	return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 Missions:
@@ -293,6 +308,8 @@ Team7:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 CollectRowAll:
 	Gui, Submit, NoHide
+	Gui, color, 00ff00
+	Gui, Show
 	for i, j in collectY
 	{
 		for k, l in collectX
@@ -302,10 +319,11 @@ CollectRowAll:
 		}
 		sleep %sleepdelay%
 	}
-
-	SplashTextOn,45,, Done!
-	Sleep 1500
-	SplashTextOff
+	Gui, color, E1E1E1
+	Gui, Show
+	;SplashTextOn,45,, Done!
+	;Sleep 1500
+	;SplashTextOff
 	return
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	
