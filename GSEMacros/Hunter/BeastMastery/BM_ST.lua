@@ -12,7 +12,7 @@ Sequences['BM_ST'] = {
     [1] = {
       StepFunction = "Sequential",
       KeyPress={
-        "/cast [@focus, exists, nodead][@party1, exists, nodead][@pet, exists, nodead] Misdirection",
+        "/cast [@focus, nodead][@party1, nodead][@pet, nodead] Misdirection",
         "/petautocastoff [group] Growl",
         "/petautocaston [nogroup] growl",
       },
@@ -37,7 +37,7 @@ Sequences['BM_ST'] = {
     [2] = {
       StepFunction = "Sequential",
       KeyPress={
-        "/cast [@focus, exists, nodead][@party1, exists, nodead][@pet, exists, nodead] Misdirection",
+        "/cast [@focus, nodead][@party1, nodead][@pet, nodead] Misdirection",
         "/petautocastoff [group] Growl",
         "/petautocaston [nogroup] growl",
       },
