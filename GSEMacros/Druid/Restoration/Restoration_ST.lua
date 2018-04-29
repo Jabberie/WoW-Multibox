@@ -14,10 +14,10 @@ Sequences['Restoration'] = {
       },
       PreMacro={
       },
-        "/cast [@focus,exists][@Party1,exists] Cenarion Ward",
-        "/castsequence [@focus,exists][@Party1,exists] reset=15/combat Lifebloom, Regrowth, Rejuvenation, Wild Growth, Healing Touch",
-        "/castsequence [@focus,exists][@Party1,exists] reset=15/combat Regrowth, Healing Touch, Swiftmend",
-        "/castsequence [@focus,exists][@Party1,exists] reset=15/combat Healing Touch, Regrowth, Rejuvenation, Ironbark",
+        "/cast [@focus,help][@Party1,exists] Cenarion Ward",
+        "/castsequence [@focus,help][@Party1,exists] reset=15/combat Lifebloom, Regrowth, Rejuvenation, Wild Growth, Healing Touch",
+        "/castsequence [@focus,help][@Party1,exists] reset=15/combat Regrowth, Healing Touch, Swiftmend",
+        "/castsequence [@focus,help][@Party1,exists] reset=15/combat Healing Touch, Regrowth, Rejuvenation, Ironbark",
       PostMacro={
       },
       KeyRelease={
