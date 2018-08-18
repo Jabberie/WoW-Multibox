@@ -1,42 +1,34 @@
 #showtooltip Earthbind Totem
 /cast [button:2] Earthbind Totem
-/stopamcro [button:2] Earthbind Totem
+/stopmacro [button:2]
 /cast [@player,combat] Earthbind Totem
 
 
+#showtooltip Spirit Link Totem
+/cast [button:2] Spirit Link Totem
+/stopmacro [button:2] 
+/cast [@player,combat] Spirit Link Totem
+
+
+#showtooltip Earthbind Totem
+/cast [button:2] Earthbind Totem
+/stopmacro [button:2] 
+/cast [@player,combat] Earthbind Totem
+
+
+#showtooltip Capacitor Totem
+/cast [button:2] Capacitor Totem
+/stopmacro [button:2] 
+/cast [@player,combat] Capacitor Totem
+
+
 #showtooltip 
 /cast [button:2] 
-/stopamcro [button:2] 
+/stopmacro [button:2] 
 /cast [@player,combat] 
 
 
 #showtooltip 
 /cast [button:2] 
-/stopamcro [button:2] 
+/stopmacro [button:2] 
 /cast [@player,combat] 
-
-
-#showtooltip 
-/cast [button:2] 
-/stopamcro [button:2] 
-/cast [@player,combat] 
-
-
-#showtooltip 
-/cast [button:2] 
-/stopamcro [button:2] 
-/cast [@player,combat] 
-
-
-#showtooltip 
-/cast [button:2] 
-/stopamcro [button:2] 
-/cast [@player,combat] 
-
-
-
-
-
-
-
-
