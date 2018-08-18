@@ -13,7 +13,7 @@
 #showtooltip Earthbind Totem
 /cast [button:2] Earthbind Totem
 /stopmacro [button:2] 
-/cast [@player,combat] Earthbind Totem
+/cast [@player] Earthbind Totem
 
 
 #showtooltip Capacitor Totem
@@ -22,13 +22,19 @@
 /cast [@player,combat] Capacitor Totem
 
 
-#showtooltip 
-/cast [button:2] 
+#showtooltip Tremor Totem
+/cast [button:2] Tremor Totem
 /stopmacro [button:2] 
-/cast [@player,combat] 
+/cast [@player,combat] Tremor Totem
 
 
-#showtooltip 
-/cast [button:2] 
+#showtooltip Healing Rain
+/cast [button:2] Healing Rain
 /stopmacro [button:2] 
-/cast [@player,combat] 
+/cast [@player] Healing Rain
+
+
+
+/stopcasting [combat]
+/cast [combat] Astral Shift
+/cast [combat] Healing Tide Totem
