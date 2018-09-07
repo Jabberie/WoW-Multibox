@@ -1,0 +1,46 @@
+shaman
+#showtooltip Binding Shot
+/cast [button:2] Binding Shot
+/stopmacro [button:2]
+/cast [@player,combat] Binding Shot
+
+
+#showtooltip Spirit Link Totem
+/cast [button:2] Spirit Link Totem
+/stopmacro [button:2] 
+/cast [@player,combat] Spirit Link Totem
+
+
+#showtooltip Earthbind Totem
+/cast [button:2] Earthbind Totem
+/stopmacro [button:2] 
+/cast [@player] Earthbind Totem
+
+
+#showtooltip Capacitor Totem
+/cast [button:2] Capacitor Totem
+/stopmacro [button:2] 
+/cast [@player,combat] Capacitor Totem
+
+
+#showtooltip Tremor Totem
+/cast [button:2] Tremor Totem
+/stopmacro [button:2] 
+/cast [@player,combat] Tremor Totem
+
+
+#showtooltip Healing Rain
+/cast [button:2] Healing Rain
+/stopmacro [button:2] 
+/cast [@player] Healing Rain
+
+
+
+/stopcasting [combat]
+/cast [combat] Astral Shift
+/cast [combat] Healing Tide Totem
+
+
+/stopcasting  
+/cast  Astral Shift
+/cast  Healing Tide Totem
