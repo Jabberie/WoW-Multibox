@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Box xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ObjectType>ISBoxer_Toolkit.Configs.WoWMacroSet</ObjectType>
+  <SerializedObject>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;WoWMacroSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Name&gt;Legacy Loot &lt;/Name&gt;
+  &lt;WoWMacros&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Death Knight") /click PlateWearer
+!if (character is in "Paladin") /click PlateWearer
+!if (character is in "Warrior") /click PlateWearer
+!if (character is in "Hunter") /click MailWearer
+!if (character is in "Shaman") /click MailWearer
+!if (character is in "Demon Hunter") /click LeatherWearer
+!if (character is in "Druid") /click LeatherWearer
+!if (character is in "Monk") /click LeatherWearer
+!if (character is in "Rogue") /click LeatherWearer
+!if (character is in "Mage") /click ClothWearer
+!if (character is in "Priest") /click ClothWearer
+!if (character is in "Warlock") /click ClothWearer&lt;/MacroCommands&gt;
+      &lt;Name&gt;LegacyLoot&lt;/Name&gt;
+      &lt;ColloquialName&gt;Trade&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/din /epic /t Plate&lt;/MacroCommands&gt;
+      &lt;Name&gt;PlateWearer&lt;/Name&gt;
+      &lt;ColloquialName&gt;Plate Wearer&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/din /epic /t Mail&lt;/MacroCommands&gt;
+      &lt;Name&gt;MailWearer&lt;/Name&gt;
+      &lt;ColloquialName&gt;Mail Wearer&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/din /epic /t Leather&lt;/MacroCommands&gt;
+      &lt;Name&gt;LeatherWearer&lt;/Name&gt;
+      &lt;ColloquialName&gt;Leather Wearer&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/din /epic /t Cloth&lt;/MacroCommands&gt;
+      &lt;Name&gt;ClothWearer&lt;/Name&gt;
+      &lt;ColloquialName&gt;Cloth Wearer&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Plate" 	and character is "Slot 1" and "Slot 2" is in "Mail") /click MailWearer
+!if (character is in "Plate" 	and character is "Slot 1" and "Slot 2" is in "Leather") /click LeatherWearer
+!if (character is in "Plate" 	and character is "Slot 1" and "Slot 2" is in "Cloth") /click ClothWearer
+!if (character is in "Mail" 	and character is "Slot 1" and "Slot 2" is in "Plate") /click PlateWearer
+!if (character is in "Mail" 	and character is "Slot 1" and "Slot 2" is in "Leather") /click LeatherWearer
+!if (character is in "Mail" 	and character is "Slot 1" and "Slot 2" is in "Cloth") /click ClothWearer
+!if (character is in "Leather" 	and character is "Slot 1" and "Slot 2" is in "Plate") /click PlateWearer
+!if (character is in "Leather" 	and character is "Slot 1" and "Slot 2" is in "Mail") /click MailWearer
+!if (character is in "Leather" 	and character is "Slot 1" and "Slot 2" is in "Cloth") /click ClothWearer
+!if (character is in "Cloth" 	and character is "Slot 1" and "Slot 2" is in "Plate") /click PlateWearer
+!if (character is in "Cloth" 	and character is "Slot 1" and "Slot 2" is in "Mail") /click MailWearer
+!if (character is in "Cloth" 	and character is "Slot 1" and "Slot 2" is in "Leather") /click LeatherWearer&lt;/MacroCommands&gt;
+      &lt;Name&gt;Load1to2&lt;/Name&gt;
+      &lt;ColloquialName&gt;Load Trade - Slot 1 to Slot 2&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Plate" 	and character is "Slot 1" and "Slot 3" is in "Mail") /click MailWearer
+!if (character is in "Plate" 	and character is "Slot 1" and "Slot 3" is in "Leather") /click LeatherWearer
+!if (character is in "Plate" 	and character is "Slot 1" and "Slot 3" is in "Cloth") /click ClothWearer
+!if (character is in "Mail" 	and character is "Slot 1" and "Slot 3" is in "Plate") /click PlateWearer
+!if (character is in "Mail" 	and character is "Slot 1" and "Slot 3" is in "Leather") /click LeatherWearer
+!if (character is in "Mail" 	and character is "Slot 1" and "Slot 3" is in "Cloth") /click ClothWearer
+!if (character is in "Leather" 	and character is "Slot 1" and "Slot 3" is in "Plate") /click PlateWearer
+!if (character is in "Leather" 	and character is "Slot 1" and "Slot 3" is in "Mail") /click MailWearer
+!if (character is in "Leather" 	and character is "Slot 1" and "Slot 3" is in "Cloth") /click ClothWearer
+!if (character is in "Cloth" 	and character is "Slot 1" and "Slot 3" is in "Plate") /click PlateWearer
+!if (character is in "Cloth" 	and character is "Slot 1" and "Slot 3" is in "Mail") /click MailWearer
+!if (character is in "Cloth" 	and character is "Slot 1" and "Slot 3" is in "Leather") /click LeatherWearer&lt;/MacroCommands&gt;
+      &lt;Name&gt;Load1to3&lt;/Name&gt;
+      &lt;ColloquialName&gt;Load Trade - Slot 1 to Slot 3&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Plate" 	and character is "Slot 1" and "Slot 4" is in "Mail") /click MailWearer
+!if (character is in "Plate" 	and character is "Slot 1" and "Slot 4" is in "Leather") /click LeatherWearer
+!if (character is in "Plate" 	and character is "Slot 1" and "Slot 4" is in "Cloth") /click ClothWearer
+!if (character is in "Mail" 	and character is "Slot 1" and "Slot 4" is in "Plate") /click PlateWearer
+!if (character is in "Mail" 	and character is "Slot 1" and "Slot 4" is in "Leather") /click LeatherWearer
+!if (character is in "Mail" 	and character is "Slot 1" and "Slot 4" is in "Cloth") /click ClothWearer
+!if (character is in "Leather" 	and character is "Slot 1" and "Slot 4" is in "Plate") /click PlateWearer
+!if (character is in "Leather" 	and character is "Slot 1" and "Slot 4" is in "Mail") /click MailWearer
+!if (character is in "Leather" 	and character is "Slot 1" and "Slot 4" is in "Cloth") /click ClothWearer
+!if (character is in "Cloth" 	and character is "Slot 1" and "Slot 4" is in "Plate") /click PlateWearer
+!if (character is in "Cloth" 	and character is "Slot 1" and "Slot 4" is in "Mail") /click MailWearer
+!if (character is in "Cloth" 	and character is "Slot 1" and "Slot 4" is in "Leather") /click LeatherWearer&lt;/MacroCommands&gt;
+      &lt;Name&gt;Load1to4&lt;/Name&gt;
+      &lt;ColloquialName&gt;Load Trade - Slot 1 to Slot 4&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Plate" 	and character is "Slot 1" and "Slot 5" is in "Mail") /click MailWearer
+!if (character is in "Plate" 	and character is "Slot 1" and "Slot 5" is in "Leather") /click LeatherWearer
+!if (character is in "Plate" 	and character is "Slot 1" and "Slot 5" is in "Cloth") /click ClothWearer
+!if (character is in "Mail" 	and character is "Slot 1" and "Slot 5" is in "Plate") /click PlateWearer
+!if (character is in "Mail" 	and character is "Slot 1" and "Slot 5" is in "Leather") /click LeatherWearer
+!if (character is in "Mail" 	and character is "Slot 1" and "Slot 5" is in "Cloth") /click ClothWearer
+!if (character is in "Leather" 	and character is "Slot 1" and "Slot 5" is in "Plate") /click PlateWearer
+!if (character is in "Leather" 	and character is "Slot 1" and "Slot 5" is in "Mail") /click MailWearer
+!if (character is in "Leather" 	and character is "Slot 1" and "Slot 5" is in "Cloth") /click ClothWearer
+!if (character is in "Cloth" 	and character is "Slot 1" and "Slot 5" is in "Plate") /click PlateWearer
+!if (character is in "Cloth" 	and character is "Slot 1" and "Slot 5" is in "Mail") /click MailWearer
+!if (character is in "Cloth" 	and character is "Slot 1" and "Slot 5" is in "Leather") /click LeatherWearer&lt;/MacroCommands&gt;
+      &lt;Name&gt;Load1to5&lt;/Name&gt;
+      &lt;ColloquialName&gt;Load Trade - Slot 1 to Slot 5&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Plate" 	and character is "Slot 2") /click MailWearer 
+!also /click LeatherWearer
+!also /click ClothWearer
+!if (character is in "Mail" 	and character is "Slot 2") /click PlateWearer
+!also /click LeatherWearer
+!also /click ClothWearer
+!if (character is in "Leather" 	and character is "Slot 2") /click PlateWearer
+!also /click MailWearer
+!also /click ClothWearer
+!if (character is in "Cloth" 	and character is "Slot 2") /click PlateWearer
+!also /click MailWearer
+!also /click LeatherWearer&lt;/MacroCommands&gt;
+      &lt;Name&gt;Load2to1&lt;/Name&gt;
+      &lt;ColloquialName&gt;Load Trade - Slot 2 to Slot 1&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Plate" 	and character is "Slot 3") /click MailWearer 
+!also /click LeatherWearer
+!also /click ClothWearer
+!if (character is in "Mail" 	and character is "Slot 3") /click PlateWearer
+!also /click LeatherWearer
+!also /click ClothWearer
+!if (character is in "Leather" 	and character is "Slot 3") /click PlateWearer
+!also /click MailWearer
+!also /click ClothWearer
+!if (character is in "Cloth" 	and character is "Slot 3") /click PlateWearer
+!also /click MailWearer
+!also /click LeatherWearer&lt;/MacroCommands&gt;
+      &lt;Name&gt;Load3to1&lt;/Name&gt;
+      &lt;ColloquialName&gt;Load Trade - Slot 3 to Slot 1&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Plate" 	and character is "Slot 4") /click MailWearer 
+!also /click LeatherWearer
+!also /click ClothWearer
+!if (character is in "Mail" 	and character is "Slot 4") /click PlateWearer
+!also /click LeatherWearer
+!also /click ClothWearer
+!if (character is in "Leather" 	and character is "Slot 4") /click PlateWearer
+!also /click MailWearer
+!also /click ClothWearer
+!if (character is in "Cloth" 	and character is "Slot 4") /click PlateWearer
+!also /click MailWearer
+!also /click LeatherWearer&lt;/MacroCommands&gt;
+      &lt;Name&gt;Load4to1&lt;/Name&gt;
+      &lt;ColloquialName&gt;Load Trade - Slot 4 to Slot 1&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is in "Plate" 	and character is "Slot 5") /click MailWearer 
+!also /click LeatherWearer
+!also /click ClothWearer
+!if (character is in "Mail" 	and character is "Slot 5") /click PlateWearer
+!also /click LeatherWearer
+!also /click ClothWearer
+!if (character is in "Leather" 	and character is "Slot 5") /click PlateWearer
+!also /click MailWearer
+!also /click ClothWearer
+!if (character is in "Cloth" 	and character is "Slot 5") /click PlateWearer
+!also /click MailWearer
+!also /click LeatherWearer&lt;/MacroCommands&gt;
+      &lt;Name&gt;Load5to1&lt;/Name&gt;
+      &lt;ColloquialName&gt;Load Trade - Slot 5 to Slot 1&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;NONE&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NONE&lt;/Key&gt;
+          &lt;Code&gt;0&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is "Slot 1")/click Load1to2
+!if (character is "Slot 2")/click Load2to1&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Trade with Slot 2&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;CTRL+NUM 2&lt;/Combo&gt;
+        &lt;Modifiers&gt;Ctrl&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NUM 2&lt;/Key&gt;
+          &lt;Code&gt;80&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is "Slot 1")/click Load1to3
+!if (character is "Slot 3")/click Load3to1&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Trade with Slot 3&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;CTRL+NUM 3&lt;/Combo&gt;
+        &lt;Modifiers&gt;Ctrl&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NUM 3&lt;/Key&gt;
+          &lt;Code&gt;81&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is "Slot 1")/click Load1to4
+!if (character is "Slot 4")/click Load4to1&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Trade with Slot 4&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;CTRL+NUM 4&lt;/Combo&gt;
+        &lt;Modifiers&gt;Ctrl&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NUM 4&lt;/Key&gt;
+          &lt;Code&gt;75&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;!if (character is "Slot 1")/click Load1to5
+!if (character is "Slot 5")/click Load5to1&lt;/MacroCommands&gt;
+      &lt;ColloquialName&gt;Trade with Slot 5&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;CTRL+NUM 5&lt;/Combo&gt;
+        &lt;Modifiers&gt;Ctrl&lt;/Modifiers&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;NUM 5&lt;/Key&gt;
+          &lt;Code&gt;76&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers /&gt;
+    &lt;/WoWMacro&gt;
+  &lt;/WoWMacros&gt;
+&lt;/WoWMacroSet&gt;</SerializedObject>
+</Box>
