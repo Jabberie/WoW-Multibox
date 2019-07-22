@@ -1,0 +1,1 @@
+/run print("Shift: ", IsShiftKeyDown()); print("Control: ", IsControlKeyDown()); print("Alt: ", IsAltKeyDown());
