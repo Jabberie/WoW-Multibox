@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Box xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ObjectType>ISBoxer_Toolkit.Configs.WoWMacroSet</ObjectType>
+  <SerializedObject>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;WoWMacroSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Name&gt;Mega Follow&lt;/Name&gt;
+  &lt;WoWMacros&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/follow {FTL}
+/click MegaFollow2 
+/click MegaFollow3
+/click MegaFollow4&lt;/MacroCommands&gt;
+      &lt;Name&gt;FTLFollow&lt;/Name&gt;
+      &lt;ColloquialName&gt;Mega Follow&lt;/ColloquialName&gt;
+      &lt;Combo&gt;
+        &lt;Combo&gt;F11&lt;/Combo&gt;
+        &lt;Key&gt;
+          &lt;Key&gt;F11&lt;/Key&gt;
+          &lt;Code&gt;87&lt;/Code&gt;
+        &lt;/Key&gt;
+      &lt;/Combo&gt;
+      &lt;AllowCustomModifiers&gt;
+        &lt;LAlt&gt;true&lt;/LAlt&gt;
+        &lt;RAlt&gt;true&lt;/RAlt&gt;
+        &lt;LShift&gt;true&lt;/LShift&gt;
+        &lt;RShift&gt;true&lt;/RShift&gt;
+        &lt;LCtrl&gt;true&lt;/LCtrl&gt;
+        &lt;RCtrl&gt;true&lt;/RCtrl&gt;
+      &lt;/AllowCustomModifiers&gt;
+      &lt;UseFTLModifiers&gt;true&lt;/UseFTLModifiers&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/follow [mod:LShift,mod:LCtrl,mod:LAlt,mod:RShift,mod:RCtrl,mod:RAlt]{SLOT27};[mod:LShift,mod:LCtrl,mod:LAlt,mod:RShift,mod:RCtrl,nomod:RAlt]{SLOT28};[mod:LShift,mod:LCtrl,mod:LAlt,mod:RShift,mod:RAlt,nomod:RCtrl]{SLOT29};[mod:LShift,mod:LCtrl,mod:LAlt,mod:RShift,nomod:RCtrl,nomod:RAlt]{SLOT30};[mod:LShift,mod:LCtrl,mod:LAlt,mod:RCtrl,mod:RAlt,nomod:RShift]{SLOT31};[mod:LShift,mod:LCtrl,mod:LAlt,mod:RCtrl,nomod:RShift,nomod:RAlt]{SLOT32};[mod:LShift,mod:LCtrl,mod:LAlt,mod:RAlt,nomod:RShift,nomod:RCtrl]{SLOT33};[mod:LShift,mod:LCtrl,mod:RShift,mod:RCtrl,mod:RAlt,nomod:LAlt]{SLOT34};[mod:LShift,mod:LCtrl,mod:RShift,mod:RCtrl,nomod:LAlt,nomod:RAlt]{SLOT35};[mod:LShift,mod:LCtrl,mod:RShift,mod:RAlt,nomod:LAlt,nomod:RCtrl]{SLOT36};[mod:LShift,mod:LCtrl,mod:RShift,nomod:LAlt,nomod:RCtrl,nomod:RAlt]{SLOT37};[mod:LShift,mod:LCtrl,mod:RCtrl,mod:RAlt,nomod:LAlt,nomod:RShift]{SLOT38};[mod:LShift,mod:LCtrl,mod:RCtrl,nomod:LAlt,nomod:RShift,nomod:RAlt]{SLOT39};&lt;/MacroCommands&gt;
+      &lt;Name&gt;MegaFollow2&lt;/Name&gt;
+      &lt;ColloquialName&gt;Mega Follow 2&lt;/ColloquialName&gt;
+      &lt;AllowCustomModifiers&gt;
+        &lt;LAlt&gt;true&lt;/LAlt&gt;
+        &lt;RAlt&gt;true&lt;/RAlt&gt;
+        &lt;LShift&gt;true&lt;/LShift&gt;
+        &lt;RShift&gt;true&lt;/RShift&gt;
+        &lt;LCtrl&gt;true&lt;/LCtrl&gt;
+        &lt;RCtrl&gt;true&lt;/RCtrl&gt;
+      &lt;/AllowCustomModifiers&gt;
+      &lt;UseFTLModifiers&gt;true&lt;/UseFTLModifiers&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/follow [mod:LShift,mod:LAlt,mod:RShift,mod:RCtrl,mod:RAlt,nomod:LCtrl]{SLOT40};[mod:LShift,mod:LAlt,mod:RShift,mod:RCtrl,nomod:LCtrl,nomod:RAlt]{SLOT41};[mod:LShift,mod:LAlt,mod:RShift,mod:RAlt,nomod:LCtrl,nomod:RCtrl]{SLOT42};[mod:LShift,mod:LAlt,mod:RShift,nomod:LCtrl,nomod:RCtrl,nomod:RAlt]{SLOT43};[mod:LShift,mod:LAlt,mod:RCtrl,mod:RAlt,nomod:LCtrl,nomod:RShift]{SLOT44};[mod:LShift,mod:LAlt,mod:RAlt,nomod:LCtrl,nomod:RShift,nomod:RCtrl]{SLOT45};[mod:LShift,mod:RShift,mod:RCtrl,mod:RAlt,nomod:LCtrl,nomod:LAlt]{SLOT46};[mod:LShift,mod:RShift,mod:RCtrl,nomod:LCtrl,nomod:LAlt,nomod:RAlt]{SLOT47};[mod:LShift,mod:RShift,mod:RAlt,nomod:LCtrl,nomod:LAlt,nomod:RCtrl]{SLOT48};[mod:LShift,mod:RShift,nomod:LCtrl,nomod:LAlt,nomod:RCtrl,nomod:RAlt]{SLOT49};[mod:LCtrl,mod:LAlt,mod:RShift,mod:RCtrl,mod:RAlt,nomod:LShift]{SLOT50};[mod:LCtrl,mod:LAlt,mod:RShift,mod:RCtrl,nomod:LShift,nomod:RAlt]{SLOT51};&lt;/MacroCommands&gt;
+      &lt;Name&gt;MegaFollow3&lt;/Name&gt;
+      &lt;ColloquialName&gt;Mega Follow 3&lt;/ColloquialName&gt;
+      &lt;AllowCustomModifiers&gt;
+        &lt;LAlt&gt;true&lt;/LAlt&gt;
+        &lt;RAlt&gt;true&lt;/RAlt&gt;
+        &lt;LShift&gt;true&lt;/LShift&gt;
+        &lt;RShift&gt;true&lt;/RShift&gt;
+        &lt;LCtrl&gt;true&lt;/LCtrl&gt;
+        &lt;RCtrl&gt;true&lt;/RCtrl&gt;
+      &lt;/AllowCustomModifiers&gt;
+      &lt;UseFTLModifiers&gt;true&lt;/UseFTLModifiers&gt;
+    &lt;/WoWMacro&gt;
+    &lt;WoWMacro&gt;
+      &lt;MacroCommands&gt;/follow [mod:LCtrl,mod:LAlt,mod:RShift,mod:RAlt,nomod:LShift,nomod:RCtrl]{SLOT52};[mod:LCtrl,mod:LAlt,mod:RCtrl,mod:RAlt,nomod:LShift,nomod:RShift]{SLOT53};[mod:LCtrl,mod:LAlt,mod:RCtrl,nomod:LShift,nomod:RShift,nomod:RAlt]{SLOT54};[mod:LCtrl,mod:LAlt,mod:RAlt,nomod:LShift,nomod:RShift,nomod:RCtrl]{SLOT55};[mod:LCtrl,mod:RShift,mod:RCtrl,mod:RAlt,nomod:LShift,nomod:LAlt]{SLOT56};[mod:LCtrl,mod:RShift,mod:RCtrl,nomod:LShift,nomod:LAlt,nomod:RAlt]{SLOT57};[mod:LCtrl,mod:RCtrl,mod:RAlt,nomod:LShift,nomod:LAlt,nomod:RShift]{SLOT58};[mod:LCtrl,mod:RCtrl,nomod:LShift,nomod:LAlt,nomod:RShift,nomod:RAlt]{SLOT59};[mod:LAlt,mod:RShift,mod:RCtrl,mod:RAlt,nomod:LShift,nomod:LCtrl]{SLOT60};[mod:LAlt,mod:RShift,mod:RAlt,nomod:LShift,nomod:LCtrl,nomod:RCtrl]{SLOT61};[mod:LAlt,mod:RCtrl,mod:RAlt,nomod:LShift,nomod:LCtrl,nomod:RShift]{SLOT62};[mod:LAlt,mod:RAlt,nomod:LShift,nomod:LCtrl,nomod:RShift,nomod:RCtrl]{SLOT63};&lt;/MacroCommands&gt;
+      &lt;Name&gt;MegaFollow4&lt;/Name&gt;
+      &lt;ColloquialName&gt;Mega Follow 4&lt;/ColloquialName&gt;
+      &lt;AllowCustomModifiers&gt;
+        &lt;LAlt&gt;true&lt;/LAlt&gt;
+        &lt;RAlt&gt;true&lt;/RAlt&gt;
+        &lt;LShift&gt;true&lt;/LShift&gt;
+        &lt;RShift&gt;true&lt;/RShift&gt;
+        &lt;LCtrl&gt;true&lt;/LCtrl&gt;
+        &lt;RCtrl&gt;true&lt;/RCtrl&gt;
+      &lt;/AllowCustomModifiers&gt;
+      &lt;UseFTLModifiers&gt;true&lt;/UseFTLModifiers&gt;
+    &lt;/WoWMacro&gt;
+  &lt;/WoWMacros&gt;
+&lt;/WoWMacroSet&gt;</SerializedObject>
+</Box>
