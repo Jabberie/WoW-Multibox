@@ -476,7 +476,9 @@
 /use Wyrmtongue Cache of Shiny Things
 /use Champion Equipment
 /use Wyrmtongue Cache of Skins
-/use Wyrmtongue Cache of Supplies&lt;/MacroCommands&gt;
+/use Wyrmtongue Cache of Supplies
+/use Icy Satchel of Helpful Goods
+/use Kirin Tor Chest&lt;/MacroCommands&gt;
       &lt;Name&gt;UseCaches9&lt;/Name&gt;
       &lt;ColloquialName&gt;UseCaches 9&lt;/ColloquialName&gt;
       &lt;Combo&gt;
