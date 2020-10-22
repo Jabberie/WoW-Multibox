@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Box xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ObjectType>ISBoxer_Toolkit.Configs.KeyMaps.MappedKey</ObjectType>
+  <SerializedObject>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;MappedKey xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Name&gt;Square Formation&lt;/Name&gt;
+  &lt;Combo&gt;
+    &lt;Combo&gt;NONE&lt;/Combo&gt;
+    &lt;Key&gt;
+      &lt;Key&gt;NONE&lt;/Key&gt;
+      &lt;Code&gt;0&lt;/Code&gt;
+    &lt;/Key&gt;
+  &lt;/Combo&gt;
+  &lt;Hold&gt;
+    &lt;Value&gt;true&lt;/Value&gt;
+  &lt;/Hold&gt;
+  &lt;Steps&gt;
+    &lt;Step&gt;
+      &lt;Actions&gt;
+        &lt;MappedKeyAction xsi:type="VariableKeystrokeAction"&gt;
+          &lt;Target&gt;(@other follower&amp;amp;~dxnothing)#1&lt;/Target&gt;
+          &lt;Name&gt;Move Forward&lt;/Name&gt;
+        &lt;/MappedKeyAction&gt;
+        &lt;MappedKeyAction xsi:type="VariableKeystrokeAction"&gt;
+          &lt;Target&gt;(@other follower&amp;amp;~dxnothing)#1&lt;/Target&gt;
+          &lt;Name&gt;Move Left&lt;/Name&gt;
+        &lt;/MappedKeyAction&gt;
+        &lt;MappedKeyAction xsi:type="VariableKeystrokeAction"&gt;
+          &lt;Target&gt;(@other follower&amp;amp;~dxnothing)#2&lt;/Target&gt;
+          &lt;Name&gt;Move Forward&lt;/Name&gt;
+        &lt;/MappedKeyAction&gt;
+        &lt;MappedKeyAction xsi:type="VariableKeystrokeAction"&gt;
+          &lt;Target&gt;(@other follower&amp;amp;~dxnothing)#2&lt;/Target&gt;
+          &lt;Name&gt;Move Right&lt;/Name&gt;
+        &lt;/MappedKeyAction&gt;
+        &lt;MappedKeyAction xsi:type="VariableKeystrokeAction"&gt;
+          &lt;Target&gt;(@other follower&amp;amp;~dxnothing)#3&lt;/Target&gt;
+          &lt;Name&gt;Move Backward&lt;/Name&gt;
+        &lt;/MappedKeyAction&gt;
+        &lt;MappedKeyAction xsi:type="VariableKeystrokeAction"&gt;
+          &lt;Target&gt;(@other follower&amp;amp;~dxnothing)#3&lt;/Target&gt;
+          &lt;Name&gt;Move Left&lt;/Name&gt;
+        &lt;/MappedKeyAction&gt;
+        &lt;MappedKeyAction xsi:type="VariableKeystrokeAction"&gt;
+          &lt;Target&gt;(@other follower&amp;amp;~dxnothing)#4&lt;/Target&gt;
+          &lt;Name&gt;Move Backward&lt;/Name&gt;
+        &lt;/MappedKeyAction&gt;
+        &lt;MappedKeyAction xsi:type="VariableKeystrokeAction"&gt;
+          &lt;Target&gt;(@other follower&amp;amp;~dxnothing)#4&lt;/Target&gt;
+          &lt;Name&gt;Move Right&lt;/Name&gt;
+        &lt;/MappedKeyAction&gt;
+      &lt;/Actions&gt;
+    &lt;/Step&gt;
+  &lt;/Steps&gt;
+&lt;/MappedKey&gt;</SerializedObject>
+</Box>
