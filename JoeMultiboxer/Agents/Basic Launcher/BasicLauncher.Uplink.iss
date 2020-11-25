@@ -47,7 +47,7 @@ objectdef basiclauncher
         for (Slot:Set[1] ; ${Slot}<=${LaunchSlots} ; Slot:Inc)
         {
             JMB:AddSlot
-            JMB.Slot[${Slot}]:SetCharacter[1]
+            JMB.Slot[${Slot}]:SetCharacter[${Slot}]
             JMB.Slot[${Slot}]:Launch
         }
     }
