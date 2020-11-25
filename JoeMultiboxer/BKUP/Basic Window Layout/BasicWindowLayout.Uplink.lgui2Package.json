@@ -1,0 +1,47 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",    
+    "templates":{
+        "bwl.button":{
+            "jsonTemplate":"button"
+        }
+    },
+    "elements": [
+        {
+            "type": "window",
+            "name": "basicWindowLayout.window",
+            "title": "Basic Window Layout",
+            "content":{
+                "type":"stackpanel",
+                "orientation":"vertical",
+                "backgroundBrush":{
+                    "color":"#ff006644"
+                },
+                "padding":20,
+                "children":[
+                    {
+                        "type":"textblock",
+                        "text":"Basic Window Layout",
+                        "margin":5,
+                        "font":{
+                            "bold":true,
+                            "face":"Verdana",
+                            "heightFactor":1.5
+                        }
+                    },            
+                    {
+                        "type":"button",
+                        "jsonTemplate":"bwl.button",
+                        "content":"Reload Basic Window Layout",
+                        "margin":[5,5,5,0],
+                        "eventHandlers":{
+                            "onPress":{
+                                "type":"code",
+                                "code":"JMB.Agent[Basic Window Layout]:Stop:Start"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

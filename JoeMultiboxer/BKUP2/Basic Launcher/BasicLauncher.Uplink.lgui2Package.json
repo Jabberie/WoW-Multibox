@@ -1,0 +1,172 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",    
+    "templates":{
+        "bl.button":{
+            "jsonTemplate":"button"
+        },
+        "BasicLauncher.gameView":{
+            "jsonTemplate":"listboxitem",
+            "padding":2,
+            "content":{
+              "type":"textblock",
+              "textBinding":{
+                "pullFormat":"${LGUI2.DataBindingContext.Locate[\"\",itemview,ancestor].Item.Data.Get[display_name]}",
+                "-pullReplaceNull":""
+              }
+            }
+          }      
+    },
+    "elements": [
+        {
+            "type": "panel",
+            "visibility": "hidden",
+            "name": "BasicLauncher.events"
+        },
+        {
+            "type": "window",
+            "name": "basicLauncher.window",
+            "title": "Basic Launcher",
+            "content":{
+                "type":"stackpanel",
+                "orientation":"vertical",
+                "backgroundBrush":{
+                    "color":"#ff006644"
+                },
+                "padding":20,
+                "children":[
+                    {
+                        "type":"textblock",
+                        "text":"Joe Multiboxer: Basic Launcher",
+                        "margin":5,
+                        "font":{
+                            "bold":true,
+                            "face":"Verdana",
+                            "heightFactor":1.5
+                        }
+                    },
+                    {
+                        "type":"stackpanel",
+                        "orientation":"vertical",
+                        "margin":[5,5,5,0],                        
+                        "children":[
+                            {
+                                "type":"textblock",
+                                "text":"Select a Game",
+                                "verticalAlignment":"center",
+                                "horizontalContentAlignment":"right",
+                                "width":100,
+                                "margin":[0,0,5,0],
+                                "font":{
+                                    "bold":true
+                                }
+                            },
+                            {
+                                "type":"listbox",
+                                "name":"bl.useGame",
+                                "width":200,
+                                "maxSize":[200,150],
+                                "itemsBinding": {
+                                    "pullFormat": "${BasicLauncher.Games.AsJSON}",
+                                    "pullHook": {
+                                      "elementName": "BasicLauncher.events",
+                                      "flags": "global",
+                                      "event": "onGamesUpdated"
+                                    }
+                                  },
+                                "selectedItemBinding":"BasicLauncher.UseGame",
+                                "selectedItemBindingProperty":"display_name",
+                                "itemViewGenerators":{
+                                    "default":{
+                                      "type":"method",
+                                      "object":"BasicLauncher",
+                                      "method":"GenerateItemView_Game"
+                                    }
+                                }
+                            }                            
+                        ]
+                    },                       
+                    {
+                        "type":"stackpanel",
+                        "margin":[5,5,5,0],
+                        "orientation":"horizontal",                        
+                        "children":[
+                            {
+                                "type":"textbox",
+                                "textBinding":"BasicLauncher.LaunchSlots",
+                                "minSize":[30,0],
+                                "margin":[0,0,5,0]
+                            },
+                            { 
+                                "type":"button",
+                                "jsonTemplate":"bl.button",
+                                "_dock":"bottom",
+                                "horizontalAlignment":"center",
+                                "content":"🚀 Launch",
+                                "font":{
+                                    "bold":true
+                                },
+                                "eventHandlers":{
+                                    "onPress":{
+                                        "type":"method",
+                                        "object":"BasicLauncher",
+                                        "method":"Launch"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type":"button",
+                        "jsonTemplate":"bl.button",
+                        "content":"Close All",
+                        "margin":[5,15,5,0],
+                        "eventHandlers":{
+                            "onPress":{
+                                "type":"method",
+                                "object":"BasicLauncher",
+                                "method":"CloseAll"
+                            }
+                        }
+                    },
+                    {
+                        "type":"expander",
+                        "margin":5,
+                        "header":"More ...",
+                        "expanded":false,
+                        "content":{
+                            "type":"stackpanel",
+                            "orientation":"vertical",
+                            "children":[                                
+                                {
+                                    "type":"button",
+                                    "jsonTemplate":"bl.button",
+                                    "content":"All Fullscreen Windowed",
+                                    "margin":[5,5,5,0],
+                                    "eventHandlers":{
+                                        "onPress":{
+                                            "type":"method",
+                                            "object":"BasicLauncher",
+                                            "method":"AllFullScreen"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type":"button",
+                                    "jsonTemplate":"bl.button",
+                                    "content":"Reload Basic Launcher",
+                                    "margin":[5,5,5,0],
+                                    "eventHandlers":{
+                                        "onPress":{
+                                            "type":"code",
+                                            "code":"JMB.Agent[Basic Launcher]:Stop:Start"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

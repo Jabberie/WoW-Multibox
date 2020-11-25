@@ -1,0 +1,37 @@
+{
+	"$schema": "http://www.lavishsoft.com/schema/agent.json",
+	"name": "Basic Window Layout",
+	"platforms": {
+		"joe multiboxer session": {
+			"eventHandlers": {
+				"onAgentStartup": {
+					"code": [
+						"run BasicWindowLayout.Session.iss"
+					]
+				},
+				"onAgentShutdown": {
+					"code": [
+						"endscript BasicWindowLayout.Session"
+					]
+				}
+			}
+		},
+		"joe multiboxer uplink": {
+				"eventHandlers": {
+					"onAgentStartup": {
+						"code": [
+							"LGUI2:LoadPackageFile[${This.Directory}/BasicWindowLayout.Uplink.lgui2Package.json]",
+							"run BasicWindowLayout.Uplink.iss"
+						]
+					},
+					"onAgentShutdown": {
+						"code": [
+							"LGUI2:UnloadPackageFile[${This.Directory}/BasicWindowLayout.Uplink.lgui2Package.json]",
+							"endscript BasicWindowLayout.Uplink"
+						]
+					}
+				}
+			}
+		
+		}
+}

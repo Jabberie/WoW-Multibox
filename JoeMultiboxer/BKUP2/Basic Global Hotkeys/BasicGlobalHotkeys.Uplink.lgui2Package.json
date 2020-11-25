@@ -1,0 +1,81 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",    
+    "elements": [
+        {
+            "type": "window",
+            "name": "basicGlobalHotkeys.window",            
+            "title": "Basic Global Hotkeys",
+            "content":{
+                "type":"stackpanel",
+                "orientation":"vertical",
+                "backgroundBrush":{
+                    "color":"#FF003322"
+                },
+                "padding":20,
+                "children":[
+                    {
+                        "type":"textblock",
+                        "text":"Joe Multiboxer: Basic Global Hotkeys",
+                        "margin":5,
+                        "font":{
+                            "bold":true,
+                            "face":"Verdana",
+                            "heightFactor":1.5
+                        }
+                    },
+                    {
+                        "type":"textblock",
+                        "text":"Work is in progress on this Agent's configuration GUI.",
+                        "margin":[5,5,5,0]
+                    },
+                    {
+                        "type":"textblock",
+                        "text":"Default Hotkeys: Ctrl+Alt+1 through Ctrl+Alt+=",
+                        "margin":[5,15,5,10],
+                        "font":{
+                            "heightFactor":1.5,
+                            "bold":true
+                        }
+                    },
+                    {
+                        "type":"textblock",
+                        "text":"Hotkeys can be set in the file:",
+                        "margin":[5,5,5,0]
+                    },
+                    {
+                        "type":"textblock",
+                        "name":"bgh.filename",
+                        "margin":[5,5,5,10],
+                        "font":{
+                            "heightFactor":1.2,
+                            "bold":true
+                        }
+                    },
+                    {
+                        "type":"expander",
+                        "margin":5,
+                        "header":"More ...",
+                        "expanded":false,
+                        "content":{
+                            "type":"stackpanel",
+                            "orientation":"vertical",
+                            "children":[                                
+                                {
+                                    "type":"button",
+                                    "content":"Reload Basic Global Hotkeys",
+                                    "margin":[5,5,5,0],
+                                    "eventHandlers":{
+                                        "onPress":{
+                                            "type":"code",
+                                            "code":"JMB.Agent[Basic Global Hotkeys]:Stop:Start"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

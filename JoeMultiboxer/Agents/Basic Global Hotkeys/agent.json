@@ -1,0 +1,36 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/agent.json",
+    "name": "Basic Global Hotkeys",
+    "platforms": {
+        "joe multiboxer uplink": {
+            "eventHandlers": {
+                "onAgentStartup": {
+                    "code": [
+                        "LGUI2:LoadPackageFile[${This.Directory}/BasicGlobalHotkeys.Uplink.lgui2Package.json]",
+                        "run BasicGlobalHotkeys.Uplink.iss"
+                    ]
+                },
+                "onAgentShutdown": {
+                    "code": [
+                        "LGUI2:UnloadPackageFile[${This.Directory}/BasicGlobalHotkeys.Uplink.lgui2Package.json]",
+                        "endscript BasicGlobalHotkeys.Uplink"
+                    ]
+                }
+            }
+        },
+        "joe multiboxer session": {
+            "eventHandlers": {
+                "onAgentStartup": {
+                    "code": [
+                        "run BasicGlobalHotkeys.Session.iss"
+                    ]
+                },
+                "onAgentShutdown": {
+                    "code": [
+                        "endscript BasicGlobalHotkeys.Session"
+                    ]
+                }
+            }
+        }
+    }
+}
