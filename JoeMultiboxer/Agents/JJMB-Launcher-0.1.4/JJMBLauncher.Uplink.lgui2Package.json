@@ -1,0 +1,203 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",    
+    "templates":{
+        "jjmbl.button":{
+            "jsonTemplate":"button",
+        },
+        "JJMBLauncher.gameView":{
+            "jsonTemplate":"listboxitem",
+            "padding":2,
+            "content":{
+              "type":"textblock",
+              "textBinding":{
+                "pullFormat":"${LGUI2.DataBindingContext.Locate[\"\",itemview,ancestor].Item.Data.Get[display_name]}",
+                "-pullReplaceNull":""
+              }
+            }
+        },
+    },
+    "elements": [
+        {
+            "type": "panel",
+            "visibility": "visible",
+            "name": "JJMBLauncher.events"
+        },
+        {
+            "type": "window",
+            "name": "JJMBLauncher.window",
+            "title": "Jabberie's JMB Launcher",
+            "horizontalAlignment":"center",
+            "verticalAlignment":"center",
+            "content":{
+                "type":"stackpanel",
+                "orientation":"vertical",
+                "backgroundBrush":{
+                    "color":"#040c3c"
+                },
+                "padding":20,
+                "children":[
+                    {
+                        "type":"textblock",
+                        "color":"#fc8804",
+                        "text":"Jabberie's JMB Launcher",
+                        "margin":[0,0,0,0],
+                        "font":{
+                            "bold":true,
+                            "face":"Comic Sans MS",
+                            "heightFactor":2
+                        }
+                    },
+                    {
+                        "type":"stackpanel",
+                        "orientation":"vertical",
+                        "margin":[5,5,5,0],                        
+                        "children":[
+                            {
+                                "type":"textblock",
+                                "color":"#fcf404",
+                                "text":"Highlight a Game from the list below",
+                                "verticalAlignment":"center",
+                                "horizontalContentAlignment":"right",
+                                "margin":[0,0,0,10],
+                                "font":{
+                                    "bold":true
+                                }
+
+                            },
+                            {
+                                "type":"listbox",
+                                "name":"jjmbl.useGame",
+                                "minSize":[200,50],
+                                "maxSize":[200,150],
+                                "itemsBinding": {
+                                    "pullFormat": "${JJMBLauncher.Games.AsJSON}",
+                                    "pullHook": {
+                                      "elementName": "JJMBLauncher.events",
+                                      "flags": "global",
+                                      "event": "onGamesUpdated"
+                                    }
+                                  },
+                                "selectedItemBinding":"JJMBLauncher.UseGame",
+                                "selectedItemBindingProperty":"display_name",
+                                "itemViewGenerators":{
+                                    "default":{
+                                      "type":"method",
+                                      "object":"JJMBLauncher",
+                                      "method":"GenerateItemView_Game"
+                                    }
+                                }
+                            }                            
+                        ]
+                    },                       
+                    {
+                        "type":"stackpanel",
+                        "margin":[0,5,0,0],
+                        "orientation":"horizontal",                        
+                        "children":[
+                            {
+                                "type":"textbox",
+                                "textBinding":"JJMBLauncher.LaunchSlots",
+                                "minSize":[30,0],
+                                "margin":[0,0,5,0]
+                            },
+                            { 
+                                "type":"button",
+                                "color":"#029602",
+                                "_dock":"bottom",
+                                "margin":[5,0,0,0],
+                                "horizontalAlignment":"center",
+                                "content":"🚀 Launch Clients",
+                                "font":{
+                                    "bold":true
+                                },
+                                "eventHandlers":{
+                                    "onPress":{
+                                        "type":"method",
+                                        "object":"JJMBLauncher",
+                                        "method":"Launch"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type":"button",
+                        "color":"#fc4444",
+                        "content":"Close All Clients",
+                        "margin":[0,5,0,0],
+                        "eventHandlers":{
+                            "onPress":{
+                                "type":"method",
+                                "object":"JJMBLauncher",
+                                "method":"CloseAll"
+                            }
+                        }
+                    },
+                    {
+                        "type":"expander",
+                        "margin":[0,5,0,0],
+                        "header":"More ...",
+                        "expanded":false,
+                        "content":{
+                            "type":"stackpanel",
+                            "orientation":"vertical",
+                            "children":[                                
+                                {
+                                    "type":"checkbox",
+                                    "margin":[0,5,0,0],
+                                    "content":"Replace previously launched Slots",
+                                    "checkedBinding":"JJMBLauncher.ReplaceSlots"
+                                },
+                                {
+                                    "type":"button",
+                                    "jsonTemplate":"jjmbl.button",
+                                    "content":"All Fullscreen Windowed",
+                                    "margin":[0,5,0,0],
+                                    "eventHandlers":{
+                                        "onPress":{
+                                            "type":"method",
+                                            "object":"JJMBLauncher",
+                                            "method":"AllFullScreen"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type":"button",
+                                    "jsonTemplate":"jjmbl.button",
+                                    "content":"Reload Jabberie's JMB Launcher",
+                                    "margin":[0,5,0,0],
+                                    "eventHandlers":{
+                                        "onPress":{
+                                            "type":"code",
+                                            "code":"JMB.Agent[Jabberie's JMB Launcher]:Stop:Start"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type":"textblock",
+                                    "color":"#fc8804",
+                                    "text":"Edit of the official JMB:Basic Launcher",
+                                    "margin":[0,15,0,0],
+                                    "font":{
+                                        "heightFactor":1
+
+                                    }
+                                },
+                                {
+                                    "type":"textblock",
+                                    "color":"#fc8804",
+                                    "text":"All credit where credit is due",
+                                    "margin":[0,0,0,0],
+                                    "font":{
+                                        "heightFactor":1
+
+                                    }
+                                },
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+  "profiles":{
+    "123":{
+      "name":"123",
+      "includeMouse":false,
+      "overrides":{
+        
+      },
+      "defaultAllow":true,
+      "switchAsHotkey":true,
+      "hotkey":{
+        
+      }
+    }
+  }
+}

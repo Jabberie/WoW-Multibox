@@ -1,0 +1,21 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/agent.json",
+    "name": "Jabberie's JMB Launcher",
+    "platforms": {
+        "joe multiboxer uplink": {
+            "eventHandlers": {
+                "onAgentStartup": {
+                    "code": [
+                        "run JJMBLauncher.Uplink.iss"
+                    ]
+                },
+                "onAgentShutdown": {
+                    "code": [                        
+                        "endscript JJMBLauncher.Uplink"
+                    ]
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,20 @@
+{
+	"$schema": "http://www.lavishsoft.com/schema/agent.json",
+	"name": "Basic Highlighter",
+	"platforms": {
+		"joe multiboxer session": {
+			"eventHandlers": {
+				"onAgentStartup": {
+					"code": [
+						"run BasicHighlighter.Session.iss"
+					]
+				},
+				"onAgentShutdown": {
+					"code": [
+						"endscript BasicWHighlighter.Session"
+					]
+				}
+			}
+		}		
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"$schema": "http://www.lavishsoft.com/schema/agent.json",
+	"name": "Basic Round-Robin",
+	"version":"20201224.1",
+	"minimumBuild":6772,
+	"description": "Round-Robin Mode switches windows after you press buttons",
+	"platforms": {
+		"joe multiboxer uplink": {
+			"eventHandlers": {
+				"onAgentStartup": {
+					"code": [
+						"run BasicRoundRobin.Uplink.iss"
+					]
+				},
+				"onAgentShutdown": {
+					"code": [
+						"endscript BasicRoundRobin.Uplink"
+					]
+				}
+			}
+		}	,
+		"joe multiboxer session": {
+			"eventHandlers": {
+				"onAgentStartup": {
+					"code": [
+						"run BasicRoundRobin.Session.iss"
+					]
+				},
+				"onAgentShutdown": {
+					"code": [
+						"endscript BasicRoundRobin.Session"
+					]
+				}
+			}
+		}		
+	}
+}

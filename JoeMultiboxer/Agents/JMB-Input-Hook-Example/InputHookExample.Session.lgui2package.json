@@ -1,0 +1,28 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",    
+    "elements": [
+        {
+            "type": "window",
+            "name": "inputHookExample.window",
+            "title": "Input Hook Example",
+            "visibility":"hidden",
+            "inputHooks": {
+                "hook1":{
+                    "modifiers":"alt",
+                    "control":{
+                        "controlName": "e",
+                        "minValue": 0.0,
+                        "maxValue": 0.0
+                    },
+                    "eventHandler":{
+                        "type":"method",
+                        "object":"IHESession",
+                        "method":"NextWindow"
+                    },
+                    "keyboardFocus": false,
+                    "mouseFocus": false
+                }
+            }
+        }
+    ]
+}

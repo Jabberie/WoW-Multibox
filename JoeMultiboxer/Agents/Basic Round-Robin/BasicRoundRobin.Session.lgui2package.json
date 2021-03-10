@@ -1,0 +1,78 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",    
+    "templates": {
+        "brr.allButtons":{
+            "type":"panel",
+            "name":"basicRoundRobin.allButtons",
+            "visibility":"visible",
+            "horizontalAlignment":"center",
+            "yFactor":0.15,
+            "padding":20,
+            "borderThickness":3,
+            "borderBrush":{
+                "color":"#ffffff00"
+            },
+            "backgroundBrush":{
+                "color":"#00000000"
+            },
+            "children":[
+                {
+                    "type":"textblock",
+                    "text":"Round-Robin mode ON",
+                    "color":"#ffffff00",
+                    "font":{
+                        "heightFactor":2,
+                        "bold":true
+                    }
+                }
+            ],
+            "acceptsKeyboardFocus":false,
+            "acceptsMouseFocus":false,
+            "inputHooks": {
+                "hook1":{
+                    "control":{
+                        "controlType": "button",
+                        "deviceType": "keyboard",
+                        "minValue": 0.0,
+                        "maxValue": 0.0
+                    },
+                    "eventHandler":{
+                        "type":"method",
+                        "object":"BRRSession",
+                        "method":"OnButtonHook"
+                    },
+                    "keyboardFocus": false,
+                    "mouseFocus": false
+                },
+                "hook2":{
+                    "control":{
+                        "controlType": "button",
+                        "deviceType": "mouse",
+                        "minValue": 0.0,
+                        "maxValue": 0.0
+                    },
+                    "eventHandler":{
+                        "type":"method",
+                        "object":"BRRSession",
+                        "method":"OnMouseButtonHook"
+                    },
+                    "keyboardFocus": false,
+                    "mouseFocus": false
+                }
+            }
+        }
+    },
+    "elements": [
+        {
+            "type":"panel",
+            "visibility":"hidden",
+            "name":"basicRoundRobin.events"
+        },
+        {
+            "type": "window",
+            "name": "basicRoundRobin.window",
+            "title": "Basic Round-Robin",
+            "visibility":"hidden"            
+        }
+    ]
+}

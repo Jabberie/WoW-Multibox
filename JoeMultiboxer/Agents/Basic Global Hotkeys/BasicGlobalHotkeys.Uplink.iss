@@ -3,16 +3,21 @@ objectdef bghUplink
     variable jsonvalue GlobalHotkeys="[]"
     variable bool Enabled=1
     variable filepath AgentFolder="${Script.CurrentDirectory}"
+    variable string NextWindowKey="Ctrl+Alt+X"
+    variable string PreviousWindowKey="Ctrl+Alt+Z"
 
     method Initialize()
     {
         This:LoadSettings
+
+        LGUI2:LoadPackageFile[BasicGlobalHotkeys.Uplink.lgui2Package.json]
         LGUI2.Element[bgh.filename]:SetText["${AgentFolder.Replace["/","\\"]~}\\bgh.Settings.json"]
     }
     
     method Shutdown()
     {
         This:Disable
+        LGUI2:UnloadPackageFile[BasicGlobalHotkeys.Uplink.lgui2Package.json]
     }
 
     method LoadSettings()
@@ -36,11 +41,13 @@ objectdef bghUplink
                     "Ctrl+Alt+0",
                     "Ctrl+Alt+-",
                     "Ctrl+Alt+=",
-                ]
+                ],
+                "previousWindowHotkey":"Ctrl+Alt+Z",
+                "nextWindowHotkey":"Ctrl+Alt+X"
             }
             <$$"]
 
-            jo:WriteFile["${AgentFolder~}/bgh.Settings.json",TRUE]
+            jo:WriteFile["${AgentFolder~}/bgh.Settings.json",multiline]
         }
 
         if !${jo:ParseFile["${AgentFolder~}/bgh.Settings.json"](exists)} || !${jo.Type.Equal[object]}
@@ -49,6 +56,10 @@ objectdef bghUplink
         }
 
         GlobalHotkeys:SetValue["${jo.Get["globalHotkeys"].AsJSON~}"]
+        if ${jo.Has[nextWindowHotkey]}
+            NextWindowKey:Set["${jo.Get["nextWindowHotkey"]~}"]
+        if ${jo.Has[previousWindowHotkey]}
+            PreviousWindowKey:Set["${jo.Get["previousWindowHotkey"]~}"]
 
         if !${GlobalHotkeys.Type.Equal[array]}
             GlobalHotkeys:SetValue["[]"]
@@ -58,13 +69,15 @@ objectdef bghUplink
     {
         variable jsonvalue jo
         jo:SetValue["${This.AsJSON~}"]
-        jo:WriteFile["${AgentFolder~}/bgh.Settings.json",TRUE]
+        jo:WriteFile["${AgentFolder~}/bgh.Settings.json",multiline]
     }
 
     member AsJSON()
     {
         variable jsonvalue jo="{}"
         jo:Set["globalHotkeys","${GlobalHotkeys.AsJSON~}"]
+        jo:Set["nextWindowHotkey","${NextWindowKey.AsJSON~}"]
+        jo:Set["previousWindowHotkey","${PreviousWindowKey.AsJSON~}"]
         return "${jo.AsJSON~}"
     }
 

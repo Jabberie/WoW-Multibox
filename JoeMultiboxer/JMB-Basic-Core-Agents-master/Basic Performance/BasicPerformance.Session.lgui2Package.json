@@ -1,0 +1,11 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",    
+    "elements": [
+        {
+            "type": "window",
+            "name": "basicPerformance.window",
+            "title": "Basic Performance",
+            "visibility":"hidden"
+        }
+    ]
+}

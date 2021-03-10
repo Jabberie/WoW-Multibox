@@ -1,0 +1,39 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",    
+    "elements":[
+        {
+            "type":"panel",
+            "visibility":"hidden",
+            "name":"bh.Highlight",
+            "borderThickness":3,
+            "borderBrush":{
+                "color":"#ffff0000"
+            },
+            "backgroundBrush":{
+                "color":"#00000000"
+            },
+            "horizontalAlignment": "stretch",
+            "verticalAlignment": "stretch",
+            "acceptsKeyboardFocus": false,
+            "acceptsMouseFocus": false
+        },
+        {
+            "type":"border",
+            "name":"bh.Number",
+            "padding":8,
+            "margin":8,
+            "borderThickness":5,
+            "borderBrush":{
+                "color":"#ffffffff"
+            },
+            "child":{
+                "type":"textblock",
+                "textBinding":"JMB.Slot",
+                "font":{
+                    "heightFactor":6.0
+                },
+                "color":"#ffffffff"
+            }
+        }
+    ]
+}

@@ -1,0 +1,106 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",    
+    "elements": [
+        {
+            "type": "window",
+            "name": "basicWindowLayout.window",
+            "title": "Basic Window Layout",
+            "content":{
+                "type":"stackpanel",
+                "backgroundBrush":{
+                    "color":"#FF003322"
+                },
+                "padding":20,
+                "children":[
+                    {
+                        "type":"textblock",
+                        "text":"Joe Multiboxer: Basic Window Layout",
+                        "margin":5,
+                        "font":{
+                            "bold":true,
+                            "face":"Verdana",
+                            "heightFactor":1.5
+                        }
+                    },
+                    {
+                        "type":"stackpanel",
+                        "horizontalContentAlignment":"left",
+                        "font":{
+                          "heightFactor":1.2  
+                        },
+                        "children":[
+                            {
+                                "type":"checkbox",
+                                "content":"Enable 'Focus Follows Mouse'",
+                                "checkedBinding":{
+                                    "pullFormat":"${BWLUplink.Settings.FocusFollowsMouse}",
+                                    "pushFormat":["BWLUplink:SetFocusFollowsMouse[\"","\"]"]
+                                }
+                            },
+                            {
+                                "type":"checkbox",
+                                "content":"Avoid Windows Taskbar area",
+                                "checkedBinding":{
+                                    "pullFormat":"${BWLUplink.Settings.AvoidTaskbar}",
+                                    "pushFormat":["BWLUplink:SetAvoidTaskbar[\"","\"]"]
+                                }
+                            },
+                            {
+                                "type":"checkbox",
+                                "content":"Swap window positions when a new window is focused",
+                                "checkedBinding":{
+                                    "pullFormat":"${BWLUplink.Settings.SwapOnActivate}",
+                                    "pushFormat":["BWLUplink:SetSwapOnActivate[\"","\"]"]
+                                }
+                            },
+                            {
+                                "type":"checkbox",
+                                "content":"Leave a hole in the layout where the main window came from",
+                                "checkedBinding":{
+                                    "pullFormat":"${BWLUplink.Settings.LeaveHole}",
+                                    "pushFormat":["BWLUplink:SetLeaveHole[\"","\"]"]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type":"button",
+                        "content":"Apply Window Layout",
+                        "margin":[5,5,5,0],
+                        "eventHandlers":{
+                            "onPress":{
+                                "type":"method",
+                                "object":"BWLUplink",
+                                "method":"ApplyWindowLayout"
+                            }
+                        }
+                    },
+                    {
+                        "type":"expander",
+                        "margin":5,
+                        "header":"More ...",
+                        "expanded":false,
+                        "content":{
+                            "type":"stackpanel",
+                            "orientation":"vertical",
+                            "children":[                                
+                                {
+                                    "type":"button",
+                                    "jsonTemplate":"bl.button",
+                                    "content":"Reload Basic Window Layout",
+                                    "margin":[5,5,5,0],
+                                    "eventHandlers":{
+                                        "onPress":{
+                                            "type":"code",
+                                            "code":"JMB.Agent[Basic Window Layout]:Stop:Start"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

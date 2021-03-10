@@ -1,0 +1,43 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",    
+    "templates": {
+
+    },
+    "elements": [
+        {
+            "type":"panel",
+            "visibility":"hidden",
+            "name":"windowFlipper.events"
+        },
+        {
+            "type": "window",
+            "name": "windowFlipper.window",
+            "title": "Window Flipper",
+            "visibility":"hidden"            
+        },
+        {
+            "type":"panel",
+            "name":"windowFlipper.hooks",
+            "visibility":"hidden",
+            "horizontalAlignment":"center",
+            "acceptsKeyboardFocus":false,
+            "acceptsMouseFocus":false,
+            "inputHooks": {
+                "hook1":{
+                    "control":{
+                        "controlName":"1",
+                        "controlType": "button",
+                        "deviceType": "keyboard"
+                    },
+                    "eventHandler":{
+                        "type":"method",
+                        "object":"WindowFlipperSession",
+                        "method":"OnButtonHook"
+                    },
+                    "keyboardFocus": false,
+                    "mouseFocus": false
+                }
+            }
+        }
+    ]
+}

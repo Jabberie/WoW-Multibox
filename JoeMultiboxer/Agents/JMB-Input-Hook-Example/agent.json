@@ -1,0 +1,20 @@
+{
+	"$schema": "http://www.lavishsoft.com/schema/agent.json",
+	"name": "Input Hook Example",
+	"platforms": {
+		"joe multiboxer session": {
+			"eventHandlers": {
+				"onAgentStartup": {
+					"code": [
+						"run InputHookExample.Session.iss"
+					]
+				},
+				"onAgentShutdown": {
+					"code": [
+						"endscript InputHookExample.Session"
+					]
+				}
+			}
+		}		
+	}
+}

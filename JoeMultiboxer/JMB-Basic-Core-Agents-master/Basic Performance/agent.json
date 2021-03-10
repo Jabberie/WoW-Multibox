@@ -1,0 +1,37 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/agent.json",
+    "name": "Basic Performance",
+    "platforms": {
+        "joe multiboxer session": {
+            "eventHandlers": {
+                "onAgentStartup": {
+                    "code": [
+                        "run BasicPerformance.Session.iss"
+                    ]
+                },
+                "onAgentShutdown": {
+                    "code": [
+                        "endscript BasicPerformance.Session"
+                    ]
+                }
+            }
+        },
+        "joe multiboxer uplink": {
+            "eventHandlers": {
+                "onAgentStartup": {
+                    "code": [
+                        "LGUI2:LoadPackageFile[${This.Directory}/BasicPerformance.Uplink.lgui2Package.json]",
+                        "run BasicPerformance.Uplink.iss"
+                    ]
+                },
+                "onAgentShutdown": {
+                    "code": [
+                        "LGUI2:UnloadPackageFile[${This.Directory}/BasicPerformance.Uplink.lgui2Package.json]",
+                        "endscript BasicPerformance.Uplink"
+                    ]
+                }
+            }
+        }
+
+    }
+}
